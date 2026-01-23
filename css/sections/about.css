@@ -1,0 +1,67 @@
+.about-content {
+  max-width: 576px;
+}
+
+.about-photo {
+  background-color: var(--color-frame-bg, #f8f8f8);
+  border-radius: 10px;
+  overflow: hidden; /*  не вылазит */
+
+  width: 100%;
+  max-width: 520px; 
+  margin-left: auto; /* справа */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 40px 22px 28px; /* компактнее */
+  gap: 16px; /*  меньше расстояние */
+}
+
+/* фото не фиксируем px и меньше */
+.about-photo img {
+  width: 100%;
+  max-width: 440px; 
+  height: auto;
+  aspect-ratio: 551 / 426; /* пропорции макета */
+
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.about-photo p {
+  margin: 0;
+  text-align: center;
+  color: var(--brand-gold, #e2c08d);
+}
+
+
+@media (max-width: 991px) {
+  .about-content {
+    max-width: none;
+  }
+
+  .about-photo {
+    max-width: 650px; /* можно больше на планшете */
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px;
+    gap: 14px;
+  }
+
+  .about-photo img {
+    max-width: none; /*  фото занимает ширину рамки */
+  }
+}
+
+
+@media (max-width: 576px) {
+  .about-photo {
+    margin-left: -12px; 
+    margin-right: -12px;
+    max-width: none;
+  }
+}

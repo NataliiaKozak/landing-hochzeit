@@ -1,0 +1,43 @@
+.promotional {
+  position: relative;
+}
+
+.promotional .promotional-content {
+  text-align: left;
+  width: 100%;
+}
+
+/* Текст — занимает ширину колонки (без max-width) */
+.promotional .promotional-content p {
+  max-width: 900px;
+  text-align: left;
+}
+
+/* Кнопка: без подчеркивания */
+.promotional .btn.btn-primary-custom {
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .promotional .promotional-content h2 {
+    text-align: left;
+  }
+
+  .promotional .btn.btn-primary-custom {
+    display: inline-flex; /*  кнопка аккуратной */
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  /* Если нужно 100% на мобиле — раскомментируй: */
+  /*
+  .promotional .btn.btn-primary-custom {
+    width: 100%;
+    justify-content: center;
+  }
+  */
+}

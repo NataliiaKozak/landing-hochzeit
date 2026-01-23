@@ -1,0 +1,50 @@
+.steps-grid__title {
+  margin: 0 0 2.25rem 0;
+  max-width: 600px; /* чтобы переносы были */
+}
+
+/* Карточки */
+.steps-card {
+    height: 100%;/*  карточки одинаковой высоты и “воздушные” */
+  padding: 1.5rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Заголовок внутри карточки */
+.steps-card__title {
+  margin: 0 0 0.75rem 0;
+}
+
+/* CTA отступ */
+.steps-grid__cta {
+  margin-top: 2.25rem;
+}
+
+/* ===== Адаптив ===== */
+
+/*  2 колонки (Bootstrap col-md-6 уже делает) */
+@media (max-width: 991px) {
+  .steps-grid__title {
+    max-width: 560px; /* чуть шире, чтобы не было “слишком много” переносов */
+  }
+}
+
+/*  1 колонка + заголовок по центру  */
+@media (max-width: 768px) {
+  .steps-grid__title {
+    text-align: center; 
+    max-width: 100%;
+    margin-bottom: 1.75rem;
+  }
+
+  /* текст в карточках остаётся читабельным слева */
+  .steps-card {
+    text-align: left;
+    padding: 1.25rem 1.25rem;
+  }
+
+  .steps-grid__cta {
+    margin-top: 1.75rem;
+  }
+}

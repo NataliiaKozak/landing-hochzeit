@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest. "
+    />
+    <meta name="keywords" content="Fotoshooting, Babybauch, kostenlos" />
+    <title>Deine Fotografen für besondere Babybauchmomente!</title>
+
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline' https://script.google.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; img-src 'self' https: data:; font-src 'self' https: data:; frame-src https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://cdn.jsdelivr.net"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+
+    <!-- OPEN GRAPH / FACEBOOK -->
+    <!-- <meta property="og:title" content="Kostenloses Babybauch-Fotoshooting für alle zukünftige Mamis" />
+    <meta property="og:description" content="Deine Fotografen für besondere Babybauchmomente" />
+    <meta property="og:image" content="/path/to/your/image.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:type" content="website" /> -->
+
+    <!-- TWITTER CARD -->
+
+    <!-- FAVICON-->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" /> 
+  -->
+    <link rel="icon" href="assets/icons/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Custom CSS -->
+    <link href="css/base-styles.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+
+    <!-- Section-specific CSS -->
+    <link href="css/sections/header.css" rel="stylesheet" />
+    <link href="css/sections/hero.css" rel="stylesheet" />
+    <link href="css/sections/promotional.css" rel="stylesheet" />
+    <link href="css/sections/features.css" rel="stylesheet" />
+    <link href="css/sections/gallery.css" rel="stylesheet" />
+    <link href="css/sections/expectations.css" rel="stylesheet" />
+    <link href="css/sections/process.css" rel="stylesheet" />
+    <link href="css/sections/video.css" rel="stylesheet" />
+    <link href="css/sections/faq.css" rel="stylesheet" />
+    <link href="css/sections/about.css" rel="stylesheet" />
+    <link href="css/sections/footer.css" rel="stylesheet" />
+    <link href="css/sections/legal-footer.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-form.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/thank-you-hero.css" rel="stylesheet" />
+    <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
+    <link href="css/sections/author-footer.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- SECTION 1
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  HERO        
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
+    <header class="site-header bg-brand-primary">
+      <div class="container">
+        <a href="index.html" class="site-header__logo text-bold-big">Logo</a>
+      </div>
+    </header>
+
+    <section class="hero-wedding bg-brand-primary">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <!-- LEFT: text -->
+          <div class="col-lg-6">
+            <div class="hero-wedding__content">
+              <h2 class="text-h2 hero-wedding__title">
+                Wie findet man den<br />
+                richtigen<br />
+                Hochzeitsfotografen?
+              </h2>
+
+              <p class="text-bold-big hero-wedding__subtitle">
+                – Am besten mit einem<br />
+                <span class="hero-wedding__accent">KOSTENLOSEN Probe-</span
+                ><br />
+                <span class="hero-wedding__accent">Fotoshooting!</span>
+              </p>
+
+              <p class="text-small hero-wedding__text">
+                Lernt uns ganz unverbindlich bei einem 20-minütigen Probe-
+                Fotoshooting kennen – kostenlos und risikofrei.
+              </p>
+
+              <p class="text-small hero-wedding__text">
+                So könnt ihr euch selbst von unserer Arbeitsweise und
+                Bildqualität überzeugen und herausfinden, ob wir die richtigen
+                Fotografen für euch sind, um euch an eurem großen Tag zu
+                begleiten.
+              </p>
+
+              <a
+                href="#"
+                class="btn-primary-custom hero-wedding__btn text-bold-small"
+              >
+                Mehr erfahren
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT: images -->
+          <!-- <div class="col-lg-6">
+            <div class="hero-wedding__frame">
+              <div class="hero-wedding__photo">
+                <img src="assets/images/7.jpg" alt="Hochzeitsfoto 1" />
+              </div>
+
+              <div class="hero-wedding__photo">
+                <img src="assets/images/9.jpg" alt="Hochzeitsfoto 2" />
+              </div>
+            </div>
+          </div> -->
+          <div class="col-lg-6">
+            <div class="hero-wedding__media">
+              <!-- квадрат-подложка  через ::before в CSS -->
+              <div class="hero-wedding__photos">
+                <div class="hero-wedding__photo">
+                  <img src="assets/images/7.jpg" alt="Hochzeitsfoto 1" />
+                </div>
+
+                <div class="hero-wedding__photo">
+                  <img src="assets/images/9.jpg" alt="Hochzeitsfoto 2" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  PROMOTIONAL - Промо-секция          
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
+    <section class="promotional section-padding bg-brand-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="promotional-content">
+              <h2 class="text-h2 mb-4">
+                KOSTENLOSES Babybauch-Fotoshooting für
+                <span class="d-block" style="color: #3d3d3d"
+                  >alle zukünftige Mamis!</span
+                >
+              </h2>
+
+              <p class="text-medium-small mb-3">
+                Sichert euch frühzeitig euren Termin für unsere spezielle,
+                kostenlose Babybauch-Fotoshooting Aktion! 10 % Rabatt auf dein
+                Newborn-Fotoshooting sichern.
+              </p>
+
+              <p class="text-medium-small mb-4">
+                Dein Babybauch-Fotoshooting – entspannt, echt &amp; wunderschön.
+                Die kostenlosen Fotoshootings haben begrenzte Plätze, und die
+                Buchungszeit gilt nur bis zum 31.12.25!
+              </p>
+
+              <a href="quiz-1.html" class="btn btn-primary-custom mb-4">
+                Kostenloses Babybauch-Fotoshooting anfragen
+              </a>
+
+              <p class="text-bold-small mb-2">Warum kostenlos?</p>
+
+              <p class="text-medium-small mb-0">
+                Weil wir auf unsere Qualität vertrauen und sicher sind, dass du
+                deine Bilder lieben wirst. Du entscheidest selbst, ob und welche
+                du kaufen möchtest, ganz ohne Risiko.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  GALLERY - Галерея изображений. Одно фото на ширину экрана                   
+     ║                                 
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section
+      class="gallery section-padding bg-brand-primary"
+      aria-label="Fotogalerie"
+    >
+      <div class="container">
+        <div class="gallery-swiper-wrap">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto13.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto10.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto5.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FEATURES - Секция с описанием и изображением                             ║
+     ║  текст сверху + рамка с фото снизу
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="features section-padding bg-brand-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="features-content">
+              <h2 class="text-h2 mb-3">
+                Dein Babybauch-Shooting -
+                <span style="color: #3d3d3d"
+                  >entspannt &amp; voller Liebe!</span
+                >
+              </h2>
+
+              <p class="text-medium-small mb-2">
+                Lehn dich zurück und genieße – ganz ohne Zeitdruck. <br />
+                Wir haben eine Auswahl an wunderschönen Kleidern und Accessoires
+                für dich da – du musst dich um nichts kümmern.
+              </p>
+
+              <p class="text-medium-small mb-0">
+                Wir halten deine Schwangerschaft und die besondere Verbindung zu
+                deinem Baby in einzigartigen Bildern fest, Erinnerungen, die
+                bleiben.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="features-frame">
+              <img
+                src="assets/images/babybauch/foto5.jpg"
+                alt="Babybauchshooting"
+                class="features-frame__img"
+                loading="lazy"
+              />
+
+              <p class="text-medium-small mb-0">
+                – für dich, für dein Kind, für immer –
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+║  expectations - Секция с преимуществами (карточки с иконками) и фото                ║
+╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="expectations section-padding bg-brand-primary">
+      <div class="container">
+        <h2 class="text-h3 expectations-title">Was dich erwartet</h2>
+
+        <div class="row g-4 expectations-list">
+          <div class="col-md-6">
+            <div class="expectation-item">
+              <div class="expectation-photo">
+                <img src="assets/icons/heart.svg" alt="" loading="lazy" />
+              </div>
+              <p class="text-bold-small mb-0">
+                Ein Ort zum Wohlfühlen, mit Ruhe,<br />
+                Wärme und Raum nur für dich..
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="expectation-item">
+              <div class="expectation-photo">
+                <img src="assets/icons/heart.svg" alt="" loading="lazy" />
+              </div>
+              <p class="text-bold-small mb-0">
+                Kleider &amp; Accessoires im Studio, du<br />
+                musst dich um nichts kümmern.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="expectation-item">
+              <div class="expectation-photo">
+                <img src="assets/icons/heart.svg" alt="" loading="lazy" />
+              </div>
+              <p class="text-bold-small mb-0">
+                Dein Wunschlook, Clean, Boho, Vintage<br />
+                oder verspielt mit Tüll &amp; Schaukel.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="expectation-item">
+              <div class="expectation-photo">
+                <img src="assets/icons/heart.svg" alt="" loading="lazy" />
+              </div>
+              <p class="text-bold-small mb-0">
+                Anleitung beim Posing, du bist<br />
+                nie allein
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Большое фото -->
+        <div class="expectations-media-wrap">
+          <img
+            class="expectations-media-img"
+            src="assets/images/babybauch/foto9.jpg"
+            alt="Studio und Atmosphäre"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6
+    ╔═══════════════════════════════════════════════════════════════════════════╗
+    ║  PROCESS - Секция с шагами/этапами процесса                               ║
+    ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
+    <section class="steps-grid section-padding bg-brand-secondary">
+      <div class="container">
+        <h2 class="text-h3 steps-grid__title">
+          Wie genau komme ich <br />
+          zum kostenlosen Fotoshooting?
+        </h2>
+
+        <div class="row g-4 steps-grid__list">
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">1. Eintragen</h3>
+              <p class="text-medium-small mb-0">
+                Mach das Quiz und beantworte die Fragen, damit wir genügend Zeit
+                für dich einplanen können. Trag dich ein und sichere dir deinen
+                unschlagbaren Gutschein! Wir melden uns so schnell wie möglich
+                bei dir.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">2. Outfits</h3>
+              <p class="text-medium-small mb-0">
+                Im Studio erwartet dich eine liebevoll zusammengestellte Auswahl
+                an Outfits, die deinen Babybauch perfekt in Szene setzen. Snacks
+                und Getränke stehen natürlich auch für dich bereit.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">3. Shootingzeit</h3>
+              <p class="text-medium-small mb-0">
+                Während des Fotoshootings entstehen vielfältige und einzigartige
+                Aufnahmen, sodass du aus einer großen Auswahl deine persönlichen
+                Favoriten wählen kannst. Familien- und Partner sind natürlich
+                inklusive, ganz ohne Aufpreis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">
+                4. Wähle dein Lieblingsbild/er aus
+              </h3>
+              <p class="text-medium-small mb-0">
+                Nach dem Shooting kannst du in Ruhe deine Lieblingsbilder
+                auswählen und entscheiden, welche du erwerben möchtest, ganz
+                ohne Kaufzwang.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">5. Ergebnis</h3>
+              <p class="text-medium-small mb-0">
+                Unvergängliche Erinnerungen in digitaler Form – jederzeit
+                abrufbar, zum Teilen mit deinen Liebsten oder für den besonderen
+                Moment zum Wiedererleben.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="steps-card">
+              <h3 class="text-bold-small steps-card__title">6. 0% Rabatt</h3>
+              <p class="text-medium-small mb-0">
+                Bei Buchung deines Babybauch-Fotoshootings erhältst du 10%
+                Rabatt auf das Neugeborenen-Fotoshooting.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="steps-grid__cta text-center">
+          <a href="quiz-1.html" class="btn btn-primary-custom">
+            Jetzt Babybauch-Fotoshooting anfragen
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  VIDEO Заменить видео!                                                    ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="video bg-brand-primary" aria-label="Video">
+      <div class="container">
+        <div class="video__wrapper">
+          <iframe
+            class="video__embed"
+            src="https://www.youtube-nocookie.com/embed/GlvhtH25DP8"
+            title="Maternity photoshoot behind the scenes"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
+     ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="faq section-padding bg-brand-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- ЗАГОЛОВОК СЕКЦИИ - изменить текст между тегами -->
+            <h2 class="text-h3 mb-5">Häufige Fragen zum Fotoshooting</h2>
+
+            <!-- ════════════════════════════════════════════════════════════════════════
+             СПИСОК ВОПРОСОВ (Аккордеон)
+             Для каждого вопроса: изменить текст в <h3> и <p>
+             ════════════════════════════════════════════════════════════════════════ -->
+            <div class="faq-list">
+              <div class="faq-item active" data-index="0">
+                <!-- ВОПРОС - изменить текст в <h3> -->
+                <button
+                  type="button"
+                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
+                  aria-expanded="true"
+                  aria-controls="faq-answer-0"
+                >
+                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 1</h3>
+                  <span class="faq-toggle ms-3" aria-hidden="true">−</span>
+                </button>
+
+                <!-- ОТВЕТ - изменить текст в <p> -->
+                <div class="faq-answer mt-3" id="faq-answer-0" role="region">
+                  <p class="text-medium-small mb-0">Antwort</p>
+                </div>
+
+                <!-- Разделитель между вопросами -->
+                <div
+                  class="faq-divider my-4"
+                  style="border-bottom: 1px solid #3d3d3d"
+                ></div>
+              </div>
+              <div class="faq-item" data-index="1">
+                <!-- ВОПРОС - изменить текст в <h3> -->
+                <button
+                  type="button"
+                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-1"
+                >
+                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 2</h3>
+                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
+                </button>
+
+                <!-- ОТВЕТ - изменить текст в <p> -->
+                <div
+                  class="faq-answer mt-3 d-none"
+                  id="faq-answer-1"
+                  role="region"
+                >
+                  <p class="text-medium-small mb-0">Antwort</p>
+                </div>
+
+                <!-- Разделитель между вопросами -->
+                <div
+                  class="faq-divider my-4"
+                  style="border-bottom: 1px solid #3d3d3d"
+                ></div>
+              </div>
+              <div class="faq-item" data-index="2">
+                <!-- ВОПРОС - изменить текст в <h3> -->
+                <button
+                  type="button"
+                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-2"
+                >
+                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 3</h3>
+                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
+                </button>
+
+                <!-- ОТВЕТ - изменить текст в <p> -->
+                <div
+                  class="faq-answer mt-3 d-none"
+                  id="faq-answer-2"
+                  role="region"
+                >
+                  <p class="text-medium-small mb-0">Antwort</p>
+                </div>
+
+                <!-- Разделитель между вопросами -->
+                <div
+                  class="faq-divider my-4"
+                  style="border-bottom: 1px solid #3d3d3d"
+                ></div>
+              </div>
+              <div class="faq-item" data-index="3">
+                <!-- ВОПРОС - изменить текст в <h3> -->
+                <button
+                  type="button"
+                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
+                  aria-expanded="false"
+                  aria-controls="faq-answer-3"
+                >
+                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 4</h3>
+                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
+                </button>
+
+                <!-- ОТВЕТ - изменить текст в <p> -->
+                <div
+                  class="faq-answer mt-3 d-none"
+                  id="faq-answer-3"
+                  role="region"
+                >
+                  <p class="text-medium-small mb-0">Antwort</p>
+                </div>
+
+                <!-- Разделитель между вопросами -->
+              </div>
+            </div>
+
+            <!-- КНОПКА - изменить текст и href="..." -->
+            <div class="row mt-4">
+              <div class="col-12 text-center">
+                <a href="quiz-1.html" class="btn btn-primary-custom">
+                  Wähle dein Fotoshooting aus
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  ABOUT - Секция "О нас" / "О фотографе"                                   ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="about section-padding bg-brand-primary">
+      <div class="container">
+        <!--  g-4 - между текстом и блоком с фото -->
+        <div class="row align-items-start g-4">
+          <!--  только col-lg-6 (ниже 992 станет в столбик) + порядок (фото первым) -->
+          <div class="col-lg-6 order-2 order-lg-1">
+            <div class="about-content">
+              <h2 class="text-bold-big mb-4">"Triple Vision"</h2>
+
+              <div class="text-medium-small" style="max-width: 576px">
+                Wir sind ein Team aus drei talentierten Fotografen mit
+                individuellen Stilen. <br /><br />
+                Zusammen ergänzen sie sich perfekt und können jede
+                Herausforderung meistern. Mit ihrer Leidenschaft und ihrem
+                Talent haben sie bereits zahlreiche Kunden begeistert und
+                unvergessliche Erinnerungen geschaffen.
+                <br /><br />
+                Ob für Hochzeiten, Familienfotos oder kommerzielle Aufträge –
+                "Triple Vision" ist die perfekte Wahl für außergewöhnliche
+                Fotografie.
+              </div>
+            </div>
+          </div>
+
+          <!-- ИЗМЕНЕНИЕ: фото-колонка первая на моб/планшете -->
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="about-photo">
+              <img
+                src="assets/images/foto.jpeg"
+                alt="Triple Vision"
+                loading="lazy"
+              />
+              <p class="text-medium-small mb-0">JS-Photography</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  FOOTER - Подвал с картой Google Maps                                     ║
+     ║  
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <footer class="footer bg-brand-white" id="contact">
+      <div class="container-fluid p-0">
+        <div class="row g-0">
+          <div class="col-12">
+            <!-- ══════════════════════════════════════════════════════════════════════════
+             GOOGLE MAPS - встроенная карта
+             Изменить src="..." на свою ссылку Google Maps Embed
+             ══════════════════════════════════════════════════════════════════════════ -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77935.54669950697!2d9.679071046090232!3d52.37974254152489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00b514d494f85%3A0x425ac6d94ac4720!2z0JPQsNC90L3QvtCy0LXRgA!5e0!3m2!1sru!2sde!4v1769144411314!5m2!1sru!2sde"
+              width="100%"
+              height="450"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin"
+              title="Standort auf Google Maps"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SECTION 11
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+    <section class="legal-footer bg-brand-primary">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <!-- ════════════════════════════════════════════════════════════════════════
+           ЮРИДИЧЕСКИЕ ССЫЛКИ
+           Impressum, Datenschutz, Cookie Richtlinien
+           ════════════════════════════════════════════════════════════════════════ -->
+          <div class="col-12 text-center">
+            <nav class="legal-links">
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="impressum.html" class="legal-link">Impressum</a>
+              <span class="legal-separator">·</span>
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="datenschutz.html" class="legal-link"
+                >Datenschutzerklärung</a
+              >
+              <span class="legal-separator">·</span>
+              <!-- ССЫЛКА - изменить href="..." и текст между > и </a> -->
+              <a href="cookies.html" class="legal-link">Cookie Richtlinien</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Common JS -->
+    <script src="js/common.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Gallery init инициализатор-->
+    <script src="js/gallery-swiper.js"></script>
+
+    <!-- Quiz JS -->
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

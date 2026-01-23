@@ -1,0 +1,16 @@
+/* =========================
+   HEADER (Logo)
+   ========================= */
+
+.site-header {
+  padding: 22px 0 10px; /* лого сверху, без большой “шапки” */
+}
+
+.site-header__logo {
+  text-decoration: none;
+  color: var(--brand-text);
+}
+
+.site-header__logo:hover {
+  opacity: 0.85;
+}
