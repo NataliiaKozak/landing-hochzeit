@@ -1,7 +1,9 @@
+/* Общие отступы секции */
 .hero-wedding {
   padding: 30px 0 80px;
 }
 
+/* Левая часть (текст) */
 .hero-wedding__content {
   max-width: 520px;
 }
@@ -30,50 +32,57 @@
   text-decoration: none;
 }
 
-/* контейнер-обёртка */
+/* ============================================================================
+   Правая часть (подложка = родитель, фото = внутри подложки)
+   ============================================================================ */
+
 .hero-wedding__media {
-  position: relative;
   width: 100%;
-  min-height: 520px; /* чтобы absolute-слои не схлопнулись */
-  overflow: visible; /* не обрезать “вылезания” */
+  overflow: visible;
+
+  /* ИЗМЕНЕНИЕ: вместо absolute-схемы — нормальный поток + прижать вправо */
+  display: flex;
+  justify-content: flex-end;
+
+  /* как было по смыслу (подложка чуть ниже) */
+  padding-top: 20px;
 }
 
-/* квадрат-подложка справа */
-.hero-wedding__media::before {
-  .hero-wedding__media::before {
-    content: '';
-    position: absolute;
+/* Подложка теперь родитель для фото */
+.hero-wedding__bg {
+  position: relative;
+  top: -24px;
+  width: min(520px, 100%);
+  /* width: min(460px, 100%); */
+  aspect-ratio: 1 / 1;
 
-    top: 20px; /*  квадрат чуть ниже, как на макете */
-    right: 0;
-
-    width: min(520px, 100%); /*  НЕ строго 540 */
-    aspect-ratio: 1 / 1;
-
-    background-color: var(--brand-secondary);
-    border-radius: 10px;
-  }
+  background-color: var(--brand-secondary);
+  border-radius: 10px;
 }
 
-/* слой с двумя фото (НЕ на весь квадрат, а как группа) */
+/* Фото-группа “приклеена” к подложке */
 .hero-wedding__photos {
   position: absolute;
 
-  top: 120px; /*  группа фото ниже верхней границы квадрата */
-  right: 140px; /*  ключ: квадрат “уходит” правее фото */
+  top: 70px;
+  bottom: 70px;
+
+  /*  блок фото смещён влево внутри подложки:
+     слева меньше отступ, справа больше (~50px) */
+  left: -50px;
+  right: 30px;
 
   display: flex;
-  gap: 36px;
-
-  z-index: 1; /* поверх подложки */
+  gap: 20px;
 }
 
-/* сами фото (делаем крупнее, как на макете) */
+/* Карточки фото: ширина считается автоматически от подложки */
 .hero-wedding__photo {
-  width: 200px; /* было 180 — из-за этого было “мелко” */
-  aspect-ratio: 3 / 4;
+  flex: 1 1 0;
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
+  min-width: 0; /* чтобы flex нормально сжимал элементы */
 }
 
 .hero-wedding__photo img {
@@ -83,32 +92,46 @@
   object-fit: cover;
 }
 
-.hero-wedding,
-.hero-wedding .container,
-.hero-wedding .row,
-.hero-wedding [class*='col-'] {
-  overflow: visible;
-}
+/* ============================================================================
+   ADAPTIVE < 992: “открепляем”
+   - фон даём на .hero-wedding__media (как  было)
+   - подложку “прячем” (display:none нельзя, т.к. в ней фото)
+   ============================================================================ */
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* Десктоп:
+.hero-wedding__bg { top: -24px; }
+.hero-wedding__photos { left: -50px; }
 
-@media (max-width: 768px) {
+992–1199:
+left: -10px;
+увеличить gutter
+
+<992:
+•	position: static;
+•	top: 0; для .hero-wedding__bg
+*/
+
+@media (max-width: 991.98px) {
   .hero-wedding {
     padding: 20px 0 50px;
   }
 
-  /* на мобиле делаем простой блок: фон + фото колонкой */
   .hero-wedding__media {
-    min-height: auto;
     background-color: var(--brand-secondary);
     border-radius: 10px;
     padding: 18px;
+
+    display: block;
+    padding-top: 18px; /* чтобы не было “двойного” top */
   }
 
-  .hero-wedding__media::before {
-    content: none; /* отключаем декоративный квадрат */
+  /*  подложку не скрываем display:none (внутри фото),
+     а делаем её прозрачной и обычной по размеру */
+  .hero-wedding__bg {
+    top: 0;
+    background: transparent;
+    width: 100%;
+    aspect-ratio: auto;
   }
 
   .hero-wedding__photos {
@@ -118,12 +141,47 @@
   }
 
   .hero-wedding__photo {
-    width: 100%;
+    height: auto;
     aspect-ratio: 4 / 5;
+    flex: none;
   }
+
+  /* .hero-wedding__btn {
+    display: flex;
+    justify-content: center;
+    min-height: 44px;
+    align-items: center;
+  } */
 
   .hero-wedding__btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Доп. мелкий мобайл  */
+@media (max-width: 576px) {
+  .hero-wedding {
+    padding: 18px 0 40px;
+  }
+
+  .hero-wedding__media {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-wedding .row {
+    --bs-gutter-x: 4rem; /* больше воздуха между колонками ~64px, можно 3.5rem если много */
+  }
+
+  .hero-wedding__photos {
+    left: -10px; /* чтобы не наезжало на текст*/
+  }
+
+  /*если в этом диапазоне подложка кажется слишком большой,
+     можно ограничить её ширину */
+  .hero-wedding__bg {
+    width: min(480px, 100%);
   }
 }
