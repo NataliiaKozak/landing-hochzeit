@@ -54,6 +54,7 @@
     <link href="css/sections/hero.css" rel="stylesheet" />
     <link href="css/sections/promotional.css" rel="stylesheet" />
     <link href="css/sections/features.css" rel="stylesheet" />
+    <link href="css/sections/benefits.css" rel="stylesheet" />
     <link href="css/sections/gallery-one-foto.css" rel="stylesheet" />
     <link href="css/sections/gallery-three-fotos.css" rel="stylesheet" />
     <link href="css/sections/expectations.css" rel="stylesheet" />
@@ -119,7 +120,7 @@
               </p>
 
               <a
-                href="#"
+                href="quiz-1.html"
                 class="btn-primary-custom hero-wedding__btn text-bold-small"
               >
                 Mehr erfahren
@@ -182,7 +183,7 @@
           </div>
 
           <div class="text-center promotional__cta">
-            <a href="#" class="btn-primary-custom text-bold-small"
+            <a href="quiz-1.html" class="btn-primary-custom text-bold-small"
               >Mehr erfahren</a
             >
           </div>
@@ -192,54 +193,144 @@
 
     <!-- SECTION 3
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  FEATURES - Секция с описанием и изображением                             ║
+     ║  benefits  - Секция с описанием и изображением                             ║
      ║  текст сверху + рамка с фото снизу
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="features section-padding bg-brand-secondary">
+    <section class="benefits section-padding bg-brand-primary">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="features-content">
-              <h2 class="text-h2 mb-3">
-                Dein Babybauch-Shooting -
-                <span style="color: #3d3d3d"
-                  >entspannt &amp; voller Liebe!</span
-                >
-              </h2>
+        <div class="text-center mb-4">
+          <h2 class="text-h2 mb-2">Was du bei uns genießen wirst...</h2>
+          <p class="text-medium-small mb-0">
+            Wir sind nicht nur ein einfaches Fotostudio – wir sind deine Lösung!
+          </p>
+        </div>
 
-              <p class="text-medium-small mb-2">
-                Lehn dich zurück und genieße – ganz ohne Zeitdruck. <br />
-                Wir haben eine Auswahl an wunderschönen Kleidern und Accessoires
-                für dich da – du musst dich um nichts kümmern.
-              </p>
+        <!-- COMMENT: убрали align-items-start, чтобы колонки могли тянуться по высоте -->
+        <div class="row g-5">
+          <!-- LEFT: cards -->
+          <div class="col-lg-7">
+            <!-- Card 1 -->
+            <div class="benefits__card">
+              <!-- COMMENT: отдельный див под иконку (чтобы под ней не было текста) -->
+              <div class="benefits__icon-wrap">
+                <img
+                  class="benefits__icon"
+                  src="assets/icons/heart.svg"
+                  alt=""
+                />
+              </div>
 
-              <p class="text-medium-small mb-0">
-                Wir halten deine Schwangerschaft und die besondere Verbindung zu
-                deinem Baby in einzigartigen Bildern fest, Erinnerungen, die
-                bleiben.
-              </p>
+              <!-- COMMENT: отдельный див под заголовок + текст -->
+              <div class="benefits__content">
+                <h3 class="text-bold-small benefits__title">
+                  Spaß und Wohlfühlen - Individuell angepasst
+                </h3>
+                <p class="text-small benefits__text">
+                  Unsere Hochzeits-Shootings sind Momente voller Freude und
+                  Emotionen. Wir schaffen eine entspannte Atmosphäre, in der ihr
+                  euch wohlfühlt und ganz ihr selbst sein könnt. Selbst wenn ihr
+                  euch vor der Kamera unsicher fühlt, helfen wir euch, eure
+                  Liebe authentisch und strahlend in Bildern festzuhalten.
+                </p>
+              </div>
+            </div>
+
+            <!-- Divider (DESKTOP only) -->
+            <div class="benefits__divider d-none d-lg-block"></div>
+
+            <!-- Card 2 -->
+            <div class="benefits__card">
+              <div class="benefits__icon-wrap">
+                <img
+                  class="benefits__icon"
+                  src="assets/icons/badge-euro.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="benefits__content">
+                <h3 class="text-bold-small benefits__title">
+                  Hohe Qualität zu fairen Preisen
+                </h3>
+                <p class="text-small benefits__text">
+                  Unsere Hochzeits-Shootings bieten euch höchste Qualität zu
+                  einem fairen Preis. Mit einem professionellen Blick fürs
+                  Detail und modernster Technik schaffen wir Hochzeitsfotos, die
+                  eure schönsten Momente perfekt einfangen. Vom ersten Gespräch
+                  bis zur finalen Bearbeitung stehen wir für Qualität und
+                  Zuverlässigkeit.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefits__divider d-none d-lg-block"></div>
+
+            <!-- Card 3 -->
+            <div class="benefits__card">
+              <div class="benefits__icon-wrap">
+                <img
+                  class="benefits__icon"
+                  src="assets/icons/wand-sparkles.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="benefits__content">
+                <h3 class="text-bold-small benefits__title">
+                  Kreativ und zuverlässig
+                </h3>
+                <p class="text-small benefits__text">
+                  Unsere Fotografen kombinieren Kreativität mit
+                  Organisationstalent, damit eure Hochzeitsbilder so einzigartig
+                  sind wie eure Liebe. Von romantischen Paaraufnahmen bis hin zu
+                  emotionalen Momenten mit Familie und Freunden setzen wir eure
+                  Hochzeit mit viel Liebe zum Detail in Szene.
+                </p>
+              </div>
+            </div>
+
+            <div class="benefits__divider d-none d-lg-block"></div>
+
+            <!-- Card 4 -->
+            <div class="benefits__card">
+              <div class="benefits__icon-wrap">
+                <img
+                  class="benefits__icon"
+                  src="assets/icons/thumbs-up.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="benefits__content">
+                <h3 class="text-bold-small benefits__title">
+                  Zufriedenheit und vielfältige Möglichkeiten
+                </h3>
+                <p class="text-small benefits__text">
+                  Eure Zufriedenheit ist unsere höchste Priorität. Ob klassisch,
+                  modern oder ausgefallen – wir passen uns euren Wünschen an und
+                  bieten zahlreiche Optionen, um eure Hochzeit unvergesslich zu
+                  machen. Gemeinsam gestalten wir ein Fotoshooting, das eure
+                  Persönlichkeit und eure Liebe perfekt widerspiegelt.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="col-12">
-            <div class="features-frame">
-              <img
-                src="assets/images/babybauch/foto5.jpg"
-                alt="Babybauchshooting"
-                class="features-frame__img"
-                loading="lazy"
-              />
+          <!-- RIGHT: photos -->
+          <div class="col-lg-5 benefits__photos-col">
+            <div class="benefits__photo">
+              <img src="assets/images/17.jpg" alt="Hochzeitsfoto" />
+            </div>
 
-              <p class="text-medium-small mb-0">
-                – für dich, für dein Kind, für immer –
-              </p>
+            <div class="benefits__photo">
+              <img src="assets/images/14.jpg" alt="Hochzeitsfoto" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 4 - 3 фото в слайдере - из проекта 1-моего
+     <!-- SECTION 4 - 3 фото в слайдере - из проекта 1-моего
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
      ║                                 

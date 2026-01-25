@@ -1,0 +1,159 @@
+/* COMMENT: переменные только для подгонки (без пиксель-перфекта) */
+.benefits {
+  --benefits-icon-size: 44px;
+  --benefits-gap: 16px;
+
+  --benefits-title-offset: 6px; /* сдвиг заголовка вниз относительно иконки (чтобы заголовок был “на середине” иконки) */
+  --benefits-divider-space: 26px; /* расстояние вокруг линий на десктопе */
+  --benefits-photo-gap: 10px; /*расстояние между фото на десктопе */
+
+  /* если нужно опустить старт фото (например, к уровню разделителя после 2 карточки) */
+  --benefits-photos-top-offset: 10px; /*  0 / 120 / 220 и т.п. */
+}
+
+/* Card layout: 2 divs (иконка слева, контент справа) */
+.benefits__card {
+  display: flex;
+  gap: var(--benefits-gap);
+  align-items: flex-start;
+}
+
+/* Icon wrap (отдельный див) */
+.benefits__icon-wrap {
+  flex: 0 0 var(--benefits-icon-size);
+}
+
+/* Icon */
+.benefits__icon {
+  width: var(--benefits-icon-size);
+  height: var(--benefits-icon-size);
+  /* display: block; */
+}
+
+/* Content wrap */
+.benefits__content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* заголовок чуть вниз, чтобы он был “по середине иконки” */
+.benefits__title {
+  margin: 0;
+  padding-top: var(--benefits-title-offset);
+}
+
+/* Text spacing (чтобы как на макете: небольшой отступ от заголовка) */
+.benefits__text {
+  margin: 10px 0 0 0;
+}
+
+/* Divider: DESKTOP only (у тебя скрывается через d-none d-lg-block) */
+.benefits__divider {
+  height: 1px;
+  background: var(--color-black);
+  margin: var(--benefits-divider-space) 0; /* линия начинается с уровня иконки  */
+}
+
+/* Photos: desktop behaviour */
+.benefits__photos-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--benefits-photo-gap);
+  height: 100%;
+
+  padding-top: var(
+    --benefits-photos-top-offset
+  ); /* если нужно “опустить” всю колонку фото (например, под уровень разделителя после 2-й карточки) */
+}
+
+/* 2 фото делят высоту поровну */
+.benefits__photo {
+  flex: 1 1 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.benefits__photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  /* .benefits__photo {
+    min-height: 300px; 
+  } */
+  .benefits__photo {
+    aspect-ratio: 1 / 1;
+    min-height: 300px;
+  }
+  .benefits__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .benefits__card {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefits__icon-wrap {
+    flex: none;
+  }
+
+  .benefits__title {
+    padding-top: 0; /* не нужно опускать */
+  }
+
+  .benefits__photos-col {
+    display: block;
+    height: auto;
+    padding-top: 0;
+    margin-top: 36px;
+    gap: 0;
+  }
+
+  .benefits__photo {
+    aspect-ratio: 16 / 10;
+  }
+
+  .benefits__photo + .benefits__photo {
+    margin-top: 18px;
+  }
+
+  .benefits__card {
+    margin-bottom: 24px;
+  }
+  .benefits__card:last-child {
+    margin-bottom: 0;
+  }
+
+  /* =======================================================
+      ВАРИАНТ-2 
+     Если при <992 оставить иконку и заголовок в ОДНУ строку,
+      раскомментировать блок ниже.
+     ======================================================= */
+
+  .benefits__card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .benefits__title {
+    padding-top: 4px;
+  }
+}
+
+/* < 768: иконки меньше */
+@media (max-width: 767.98px) {
+  .benefits {
+    --benefits-icon-size: 32px;
+    --benefits-gap: 12px;
+    --benefits-divider-space: 22px;
+  }
+}
