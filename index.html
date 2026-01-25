@@ -55,8 +55,8 @@
     <link href="css/sections/promotional.css" rel="stylesheet" />
     <link href="css/sections/features.css" rel="stylesheet" />
     <link href="css/sections/benefits.css" rel="stylesheet" />
-    <link href="css/sections/gallery-one-foto.css" rel="stylesheet" />
-    <link href="css/sections/gallery-three-fotos.css" rel="stylesheet" />
+    <link href="css/sections/gallery-single.css" rel="stylesheet" />
+    <link href="css/sections/gallery-triple.css" rel="stylesheet" />
     <link href="css/sections/expectations.css" rel="stylesheet" />
     <link href="css/sections/process.css" rel="stylesheet" />
     <link href="css/sections/video.css" rel="stylesheet" />
@@ -194,7 +194,7 @@
     <!-- SECTION 3
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  benefits  - Секция с описанием и изображением                             ║
-     ║  текст сверху + рамка с фото снизу
+     ║ 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section class="benefits section-padding bg-brand-primary">
       <div class="container">
@@ -330,30 +330,24 @@
       </div>
     </section>
 
-     <!-- SECTION 4 - 3 фото в слайдере - из проекта 1-моего
+    <!-- SECTION 4 
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
+     ║  GALLERY - Галерея изображений (Swiper.js слайдер)  - 3 фото в слайдере                       ║
      ║                                 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-
-    <!-- <section
-      class="gallery section-padding bg-brand-secondary"
+    <section
+      class="gallery gallery--triple section-padding bg-brand-primary"
       aria-label="Fotogalerie"
     >
-      <div class="container"> -->
-    <!-- ══════════════════════════════════════════════════════════════════════════
-         SWIPER ГАЛЕРЕЯ
-         imageHeight: высота изображений в пикселях (по умолчанию 350)
-         ══════════════════════════════════════════════════════════════════════════ -->
-    <!-- Swiper WRAP: поля под стрелки -->
-    <!-- <div class="gallery-swiper-wrap">
+      <div class="container">
+        <div class="gallery-swiper-wrap">
           <div class="swiper gallery-swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto13.jpg"
-                    alt="Babybauchshooting"
+                    src="assets/images/7.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
@@ -363,8 +357,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto5.jpg"
-                    alt="Babybauchshooting"
+                    src="assets/images/6.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
@@ -374,8 +368,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/newborn/foto1.jpg"
-                    alt="Neugeborenenshooting"
+                    src="assets/images/15.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
@@ -385,8 +379,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto7.jpeg"
-                    alt="Babybauchshooting"
+                    src="assets/images/11.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
@@ -396,8 +390,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/newborn/foto6.jpg"
-                    alt="Neugeborenenshooting"
+                    src="assets/images/10.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
@@ -407,26 +401,28 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/newborn/foto4.jpg"
-                    alt="Neugeborenenshooting"
+                    src="assets/images/16.jpg"
+                    alt="Hochzeit"
                     class="img-fluid"
                     loading="lazy"
                   />
                 </div>
               </div>
-            </div> -->
+            </div>
 
-    <!-- точки -->
-    <!-- <div class="swiper-pagination"></div>
-          </div> -->
+            <!-- точки можно оставить, но для triple мы их скроем в CSS -->
+            <div class="swiper-pagination"></div>
+          </div>
 
-    <!-- стрелки ВНЕ swiper (в полях) -->
-    <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
         </div>
-      </div>
-    </section> -->
 
+        <div class="text-center text-bold-small mt-4">
+          <a class="btn-primary-custom" href="quiz-1.html">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
     <!-- SECTION 5
   ╔═══════════════════════════════════════════════════════════════════════════╗
 ║  expectations - Секция с преимуществами (карточки с иконками) и фото                ║
@@ -579,13 +575,6 @@
             </div>
           </div>
         </div>
-
-        <!-- CTA -->
-        <div class="steps-grid__cta text-center">
-          <a href="quiz-1.html" class="btn btn-primary-custom">
-            Jetzt Babybauch-Fotoshooting anfragen
-          </a>
-        </div>
       </div>
     </section>
 
@@ -595,7 +584,7 @@
      ║                                 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
-      class="gallery section-padding bg-brand-primary"
+      class="gallery gallery--single section-padding bg-brand-primary"
       aria-label="Fotogalerie"
     >
       <div class="container">
@@ -605,8 +594,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto13.jpg"
-                    alt="Babybauchshooting"
+                    src="assets/images/14.jpg"
+                    alt="Hochzeit"
                     loading="lazy"
                   />
                 </div>
@@ -615,8 +604,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto10.jpg"
-                    alt="Babybauchshooting"
+                    src="assets/images/17.jpg"
+                    alt="Hochzeit"
                     loading="lazy"
                   />
                 </div>
@@ -625,8 +614,8 @@
               <div class="swiper-slide">
                 <div class="gallery-item">
                   <img
-                    src="assets/images/babybauch/foto5.jpg"
-                    alt="Babybauchshooting"
+                    src="assets/images/15.jpg"
+                    alt="Hochzeit"
                     loading="lazy"
                   />
                 </div>
@@ -638,6 +627,12 @@
 
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+        </div>
+
+        <div class="gallery__cta text-bold-small text-center">
+          <a class="btn-primary-custom" href="quiz-1.html"
+            >Zum Kostenlosen Fotoshooting</a
+          >
         </div>
       </div>
     </section>

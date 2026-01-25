@@ -1,0 +1,159 @@
+/* =========================
+   GALLERY TRIPLE (скрин 5)
+   ========================= */
+
+.gallery--triple {
+  position: relative;
+  overflow: visible;
+}
+
+.gallery--triple > .container {
+  position: relative;
+}
+
+/* поля под стрелки (десктоп) */
+.gallery--triple .gallery-swiper-wrap {
+  position: relative;
+  padding: 0 60px;
+  overflow: visible;
+}
+
+/* важно: visible, чтобы не резало scale/белую подложку */
+.gallery--triple .gallery-swiper {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+}
+
+.gallery--triple .gallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery--triple .gallery-item img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* точки скрываем  */
+.gallery--triple .swiper-pagination {
+  display: none;
+}
+
+/* стрелки по краям wrap */
+.gallery--triple .swiper-button-prev,
+.gallery--triple .swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  margin-top: 0 !important;
+
+  background: transparent !important;
+  color: #3d3d3d;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery--triple .swiper-button-prev {
+  left: 0;
+}
+.gallery--triple .swiper-button-next {
+  right: 0;
+}
+
+/* .gallery--triple .swiper-button-prev:hover,
+.gallery--triple .swiper-button-next:hover {
+  color: #e2c08d !important;
+} */
+
+.gallery--triple .swiper-button-prev::after,
+.gallery--triple .swiper-button-next::after {
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 300 !important;
+  line-height: 1 !important;
+}
+
+.gallery--triple .swiper-button-prev::after {
+  content: '←';
+}
+.gallery--triple .swiper-button-next::after {
+  content: '→';
+}
+
+/* =========================
+   ДЕСКТОП (>=992): 3 фото
+   центральное активное: больше + белая подложка
+   ========================= */
+@media (min-width: 992px) {
+  .gallery--triple .swiper-slide {
+    transform: scale(0.82);
+    transition: transform 0.25s ease;
+  }
+
+  .gallery--triple .swiper-slide-active {
+    transform: scale(1);
+  }
+
+  .gallery--triple .swiper-slide-active .gallery-item {
+    background: #fff;
+    padding: 22px;
+    border-radius: 10px;
+  }
+}
+
+/* =========================
+   МОБИЛКА/ПЛАНШЕТ (<992):
+   1 фото на всю ширину экрана + свайп
+   ========================= */
+@media (max-width: 991.98px) {
+  /* на всю ширину (container не ограничивает) */
+  /* .gallery--triple > .container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  } */
+
+  /* убираем боковые поля под стрелки */
+  .gallery--triple .gallery-swiper-wrap {
+    padding: 0;
+  }
+
+  /* стрелки скрываем — остаётся свайп */
+  .gallery--triple .swiper-button-prev,
+  .gallery--triple .swiper-button-next {
+    display: none !important;
+  }
+
+  /* отключаем десктоп-эффект */
+  .gallery--triple .swiper-slide,
+  .gallery--triple .swiper-slide-active {
+    transform: none;
+  }
+
+  .gallery--triple .swiper-slide-active .gallery-item {
+    background: transparent;
+    padding: 0;
+  }
+
+  .gallery--triple .gallery-item img {
+    height: 380px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .gallery--triple .gallery-item img {
+    height: 340px;
+  }
+}

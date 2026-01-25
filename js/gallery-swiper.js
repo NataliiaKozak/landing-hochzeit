@@ -1,156 +1,63 @@
 (function () {
-  function initGallerySingle() {
-    var sections = document.querySelectorAll('.gallery');
-    if (!sections.length) return;
+  function initGalleries() {
+    if (typeof Swiper === 'undefined') return;
 
-    sections.forEach(function (gallerySection) {
-      var slides = gallerySection.querySelectorAll('.swiper-slide');
-      if (!slides.length) return;
+    var galleries = document.querySelectorAll('.gallery');
+    if (!galleries.length) return;
 
-      var prevBtn = gallerySection.querySelector('.swiper-button-prev');
-      var nextBtn = gallerySection.querySelector('.swiper-button-next');
+    galleries.forEach(function (section) {
+      var swiperEl = section.querySelector('.gallery-swiper');
+      if (!swiperEl) return;
 
-      var currentIndex = 0;
+      var isTriple = section.classList.contains('gallery--triple');
+      var isSingle = section.classList.contains('gallery--single');
 
-      function show(index) {
-        // всегда только 1 видимый слайд
-        slides.forEach(function (slide, i) {
-          slide.hidden = i !== index;
-        });
-        currentIndex = index;
-      }
+      var config = {
+        loop: true,
+        grabCursor: true,
 
-      function prev() {
-        var nextIndex = currentIndex > 0 ? currentIndex - 1 : slides.length - 1;
-        show(nextIndex);
-      }
+        // по умолчанию (мобилка): 1 фото и свайп
+        slidesPerView: 1,
+        spaceBetween: 16,
+        centeredSlides: false,
 
-      function next() {
-        var nextIndex = currentIndex < slides.length - 1 ? currentIndex + 1 : 0;
-        show(nextIndex);
-      }
-
-      // init
-      show(0);
-
-      // arrows
-      if (prevBtn) prevBtn.addEventListener('click', prev);
-      if (nextBtn) nextBtn.addEventListener('click', next);
-
-      // swipe
-      var swipeArea = gallerySection.querySelector('.gallery-swiper');
-      if (!swipeArea) return;
-
-      var startX = 0;
-
-      swipeArea.addEventListener(
-        'touchstart',
-        function (e) {
-          startX = e.touches[0].clientX;
+        navigation: {
+          nextEl: section.querySelector('.swiper-button-next'),
+          prevEl: section.querySelector('.swiper-button-prev'),
         },
-        { passive: true },
-      );
-
-      swipeArea.addEventListener(
-        'touchend',
-        function (e) {
-          var endX = e.changedTouches[0].clientX;
-          var diff = startX - endX;
-
-          if (Math.abs(diff) > 50) {
-            if (diff > 0) next();
-            else prev();
-          }
+        pagination: {
+          el: section.querySelector('.swiper-pagination'),
+          clickable: true,
         },
-        { passive: true },
-      );
+      };
+
+      if (isTriple) {
+        // 1 фото на мобилке, 3 фото на десктопе (>=992)
+        config.breakpoints = {
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 60,
+            centeredSlides: true,
+          },
+        };
+      }
+
+      if (isSingle) {
+        // всегда 1 фото
+        config.slidesPerView = 1;
+        config.spaceBetween = 0;
+        config.centeredSlides = false;
+      }
+
+      new Swiper(swiperEl, config);
     });
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initGallerySingle);
+    document.addEventListener('DOMContentLoaded', initGalleries);
   } else {
-    initGallerySingle();
+    initGalleries();
   }
 })();
 
 
-
-// из моего проект 1 - беременые и нворожденные - 2 свайпера
-// (function () {
-//   function initGallerySwiper() {
-//     var gallerySection = document.querySelector('.gallery');
-//     if (!gallerySection) return;
-
-//     var swiperEl = gallerySection.querySelector('.gallery-swiper');
-//     if (!swiperEl) return;
-
-//     if (typeof Swiper === 'undefined') return;
-
-//     var swiperConfig = {
-//       slidesPerView: 1,
-//       spaceBetween: 15,
-//       loop: true,
-//       pagination: {
-//         el: gallerySection.querySelector('.swiper-pagination'),
-//         clickable: true,
-//       },
-//       navigation: {
-//         nextEl: gallerySection.querySelector('.swiper-button-next'),
-//         prevEl: gallerySection.querySelector('.swiper-button-prev'),
-//       },
-//       grabCursor: true,
-//       breakpoints: {
-//         576: { slidesPerView: 2, spaceBetween: 15 },
-//         768: { slidesPerView: 2, spaceBetween: 20 },
-//         992: { slidesPerView: 3, spaceBetween: 20 },
-//       },
-//     };
-
-//     new Swiper(swiperEl, swiperConfig);
-//   }
-
-//   if (document.readyState === 'loading') {
-//     document.addEventListener('DOMContentLoaded', initGallerySwiper);
-//   } else {
-//     initGallerySwiper();
-//   }
-// })();
-
-// (function () {
-//   function initServicesSwiper() {
-//     var section = document.querySelector('.services');
-//     if (!section) return;
-
-//     var swiperEl = section.querySelector('.services-swiper');
-//     if (!swiperEl) return;
-
-//     if (typeof Swiper === 'undefined') return;
-
-//     new Swiper(swiperEl, {
-//       slidesPerView: 1,
-//       spaceBetween: 15,
-//       loop: true,
-//       pagination: {
-//         el: section.querySelector('.services-pagination'),
-//         clickable: true,
-//       },
-//       navigation: {
-//         nextEl: section.querySelector('.services-button-next'),
-//         prevEl: section.querySelector('.services-button-prev'),
-//       },
-//       grabCursor: true,
-//       breakpoints: {
-//         576: { slidesPerView: 2, spaceBetween: 15 },
-//         768: { slidesPerView: 2, spaceBetween: 20 },
-//         992: { slidesPerView: 3, spaceBetween: 20 },
-//       },
-//     });
-//   }
-
-//   if (document.readyState === 'loading') {
-//     document.addEventListener('DOMContentLoaded', initServicesSwiper);
-//   } else {
-//     initServicesSwiper();
-//   }
-// })();
