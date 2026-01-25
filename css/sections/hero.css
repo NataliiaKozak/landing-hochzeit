@@ -29,7 +29,7 @@
   min-height: 44px;
   padding: 0 26px;
   border-radius: 10px;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 /* ============================================================================
@@ -151,12 +151,12 @@ left: -10px;
     justify-content: center;
     min-height: 44px;
     align-items: center;
-  } */
+  }  */
 
-  .hero-wedding__btn {
+  /* .hero-wedding__btn {
     width: 100%;
     justify-content: center;
-  }
+  } */
 }
 
 /* Доп. мелкий мобайл  */
@@ -167,6 +167,11 @@ left: -10px;
 
   .hero-wedding__media {
     padding: 16px;
+  }
+
+  .hero-wedding__btn {
+    width: 100%;
+    justify-content: center;
   }
 }
 

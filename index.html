@@ -54,7 +54,8 @@
     <link href="css/sections/hero.css" rel="stylesheet" />
     <link href="css/sections/promotional.css" rel="stylesheet" />
     <link href="css/sections/features.css" rel="stylesheet" />
-    <link href="css/sections/gallery.css" rel="stylesheet" />
+    <link href="css/sections/gallery-one-foto.css" rel="stylesheet" />
+    <link href="css/sections/gallery-three-fotos.css" rel="stylesheet" />
     <link href="css/sections/expectations.css" rel="stylesheet" />
     <link href="css/sections/process.css" rel="stylesheet" />
     <link href="css/sections/video.css" rel="stylesheet" />
@@ -70,7 +71,7 @@
   </head>
 
   <body>
-    <!-- SECTION 1
+    <!-- HERO 
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  HERO        
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
@@ -80,6 +81,11 @@
         <a href="index.html" class="site-header__logo text-bold-big">Logo</a>
       </div>
     </header>
+
+    <!-- SECTION 1
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║ SECTION 1      
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
 
     <section class="hero-wedding bg-brand-primary">
       <div class="container">
@@ -144,102 +150,47 @@
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  PROMOTIONAL - Промо-секция          
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-
-    <section class="promotional section-padding bg-brand-secondary">
+    <section class="promotional section-padding">
       <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="promotional-content">
-              <h2 class="text-h2 mb-4">
-                KOSTENLOSES Babybauch-Fotoshooting für
-                <span class="d-block" style="color: #3d3d3d"
-                  >alle zukünftige Mamis!</span
-                >
-              </h2>
+        <div class="section-panel bg-brand-secondary">
+          <div class="promotional__grid">
+            <h2 class="text-h3 promotional__title">
+              Eure Liebe, eure Geschichte –<br />
+              einzigartig und unvergesslich<br />
+              festgehalten.
+            </h2>
 
-              <p class="text-medium-small mb-3">
-                Sichert euch frühzeitig euren Termin für unsere spezielle,
-                kostenlose Babybauch-Fotoshooting Aktion! 10 % Rabatt auf dein
-                Newborn-Fotoshooting sichern.
-              </p>
-
-              <p class="text-medium-small mb-4">
-                Dein Babybauch-Fotoshooting – entspannt, echt &amp; wunderschön.
-                Die kostenlosen Fotoshootings haben begrenzte Plätze, und die
-                Buchungszeit gilt nur bis zum 31.12.25!
-              </p>
-
-              <a href="quiz-1.html" class="btn btn-primary-custom mb-4">
-                Kostenloses Babybauch-Fotoshooting anfragen
-              </a>
-
-              <p class="text-bold-small mb-2">Warum kostenlos?</p>
-
-              <p class="text-medium-small mb-0">
-                Weil wir auf unsere Qualität vertrauen und sicher sind, dass du
-                deine Bilder lieben wirst. Du entscheidest selbst, ob und welche
-                du kaufen möchtest, ganz ohne Risiko.
-              </p>
+            <!-- Горизонтальное фото (слева) -->
+            <div class="promotional__photo promotional__photo--wide">
+              <img src="assets/images/1.jpg" alt="Hochzeitsfoto" />
             </div>
+
+            <!-- Вертикальное фото (справа) -->
+            <div class="promotional__photo promotional__photo--tall">
+              <img src="assets/images/16.jpg" alt="Hochzeitsfoto" />
+            </div>
+
+            <!-- Текст (справа снизу) -->
+            <p class="text-small promotional__text">
+              Mit unserer Erfahrung in der Hochzeitsfotografie schaffen wir
+              Erinnerungen, die ein Leben lang bleiben. Ob romantisch, elegant
+              oder modern – wir halten eure besondere Verbindung authentisch
+              fest und bewahren eure schönsten Momente.<br /><br />
+              Lasst euch von uns beraten und überzeugt euch von unserer
+              Professionalität.
+            </p>
+          </div>
+
+          <div class="text-center promotional__cta">
+            <a href="#" class="btn-primary-custom text-bold-small"
+              >Mehr erfahren</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 3
-     ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений. Одно фото на ширину экрана                   
-     ║                                 
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section
-      class="gallery section-padding bg-brand-primary"
-      aria-label="Fotogalerie"
-    >
-      <div class="container">
-        <div class="gallery-swiper-wrap">
-          <div class="swiper gallery-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <img
-                    src="assets/images/babybauch/foto13.jpg"
-                    alt="Babybauchshooting"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <img
-                    src="assets/images/babybauch/foto10.jpg"
-                    alt="Babybauchshooting"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="gallery-item">
-                  <img
-                    src="assets/images/babybauch/foto5.jpg"
-                    alt="Babybauchshooting"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-pagination"></div>
-          </div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FEATURES - Секция с описанием и изображением                             ║
      ║  текст сверху + рамка с фото снизу
@@ -287,6 +238,103 @@
         </div>
       </div>
     </section>
+
+    <!-- SECTION 4 - 3 фото в слайдере - из проекта 1-моего
+     ╔═══════════════════════════════════════════════════════════════════════════╗
+     ║  GALLERY - Галерея изображений (Swiper.js слайдер)                        ║
+     ║                                 
+     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
+
+    <!-- <section
+      class="gallery section-padding bg-brand-secondary"
+      aria-label="Fotogalerie"
+    >
+      <div class="container"> -->
+    <!-- ══════════════════════════════════════════════════════════════════════════
+         SWIPER ГАЛЕРЕЯ
+         imageHeight: высота изображений в пикселях (по умолчанию 350)
+         ══════════════════════════════════════════════════════════════════════════ -->
+    <!-- Swiper WRAP: поля под стрелки -->
+    <!-- <div class="gallery-swiper-wrap">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto13.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto5.jpg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto1.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto7.jpeg"
+                    alt="Babybauchshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto6.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/newborn/foto4.jpg"
+                    alt="Neugeborenenshooting"
+                    class="img-fluid"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div> -->
+
+    <!-- точки -->
+    <!-- <div class="swiper-pagination"></div>
+          </div> -->
+
+    <!-- стрелки ВНЕ swiper (в полях) -->
+    <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section> -->
 
     <!-- SECTION 5
   ╔═══════════════════════════════════════════════════════════════════════════╗
@@ -452,165 +500,58 @@
 
     <!-- SECTION 7
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  VIDEO Заменить видео!                                                    ║
+     ║  GALLERY - Галерея изображений. Одно фото на ширину экрана                   
+     ║                                 
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="video bg-brand-primary" aria-label="Video">
+    <section
+      class="gallery section-padding bg-brand-primary"
+      aria-label="Fotogalerie"
+    >
       <div class="container">
-        <div class="video__wrapper">
-          <iframe
-            class="video__embed"
-            src="https://www.youtube-nocookie.com/embed/GlvhtH25DP8"
-            title="Maternity photoshoot behind the scenes"
-            frameborder="0"
-            allow="
-              accelerometer;
-              autoplay;
-              clipboard-write;
-              encrypted-media;
-              gyroscope;
-              picture-in-picture;
-              web-share;
-            "
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <div class="gallery-swiper-wrap">
+          <div class="swiper gallery-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto13.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto10.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="gallery-item">
+                  <img
+                    src="assets/images/babybauch/foto5.jpg"
+                    alt="Babybauchshooting"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
 
     <!-- SECTION 8
-     ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  FAQ - Часто задаваемые вопросы (аккордеон)                               ║
-     ║  Первый вопрос открыт по умолчанию, остальные закрыты                     ║
-     ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="faq section-padding bg-brand-secondary">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- ЗАГОЛОВОК СЕКЦИИ - изменить текст между тегами -->
-            <h2 class="text-h3 mb-5">Häufige Fragen zum Fotoshooting</h2>
-
-            <!-- ════════════════════════════════════════════════════════════════════════
-             СПИСОК ВОПРОСОВ (Аккордеон)
-             Для каждого вопроса: изменить текст в <h3> и <p>
-             ════════════════════════════════════════════════════════════════════════ -->
-            <div class="faq-list">
-              <div class="faq-item active" data-index="0">
-                <!-- ВОПРОС - изменить текст в <h3> -->
-                <button
-                  type="button"
-                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
-                  aria-expanded="true"
-                  aria-controls="faq-answer-0"
-                >
-                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 1</h3>
-                  <span class="faq-toggle ms-3" aria-hidden="true">−</span>
-                </button>
-
-                <!-- ОТВЕТ - изменить текст в <p> -->
-                <div class="faq-answer mt-3" id="faq-answer-0" role="region">
-                  <p class="text-medium-small mb-0">Antwort</p>
-                </div>
-
-                <!-- Разделитель между вопросами -->
-                <div
-                  class="faq-divider my-4"
-                  style="border-bottom: 1px solid #3d3d3d"
-                ></div>
-              </div>
-              <div class="faq-item" data-index="1">
-                <!-- ВОПРОС - изменить текст в <h3> -->
-                <button
-                  type="button"
-                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-1"
-                >
-                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 2</h3>
-                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
-                </button>
-
-                <!-- ОТВЕТ - изменить текст в <p> -->
-                <div
-                  class="faq-answer mt-3 d-none"
-                  id="faq-answer-1"
-                  role="region"
-                >
-                  <p class="text-medium-small mb-0">Antwort</p>
-                </div>
-
-                <!-- Разделитель между вопросами -->
-                <div
-                  class="faq-divider my-4"
-                  style="border-bottom: 1px solid #3d3d3d"
-                ></div>
-              </div>
-              <div class="faq-item" data-index="2">
-                <!-- ВОПРОС - изменить текст в <h3> -->
-                <button
-                  type="button"
-                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-2"
-                >
-                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 3</h3>
-                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
-                </button>
-
-                <!-- ОТВЕТ - изменить текст в <p> -->
-                <div
-                  class="faq-answer mt-3 d-none"
-                  id="faq-answer-2"
-                  role="region"
-                >
-                  <p class="text-medium-small mb-0">Antwort</p>
-                </div>
-
-                <!-- Разделитель между вопросами -->
-                <div
-                  class="faq-divider my-4"
-                  style="border-bottom: 1px solid #3d3d3d"
-                ></div>
-              </div>
-              <div class="faq-item" data-index="3">
-                <!-- ВОПРОС - изменить текст в <h3> -->
-                <button
-                  type="button"
-                  class="faq-question d-flex justify-content-between align-items-start w-100 text-start bg-transparent border-0 p-0"
-                  aria-expanded="false"
-                  aria-controls="faq-answer-3"
-                >
-                  <h3 class="text-bold-big mb-0 flex-grow-1">Frage 4</h3>
-                  <span class="faq-toggle ms-3" aria-hidden="true">+</span>
-                </button>
-
-                <!-- ОТВЕТ - изменить текст в <p> -->
-                <div
-                  class="faq-answer mt-3 d-none"
-                  id="faq-answer-3"
-                  role="region"
-                >
-                  <p class="text-medium-small mb-0">Antwort</p>
-                </div>
-
-                <!-- Разделитель между вопросами -->
-              </div>
-            </div>
-
-            <!-- КНОПКА - изменить текст и href="..." -->
-            <div class="row mt-4">
-              <div class="col-12 text-center">
-                <a href="quiz-1.html" class="btn btn-primary-custom">
-                  Wähle dein Fotoshooting aus
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 9
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  ABOUT - Секция "О нас" / "О фотографе"                                   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
@@ -653,7 +594,7 @@
       </div>
     </section>
 
-    <!-- SECTION 10
+    <!-- SECTION 9
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  FOOTER - Подвал с картой Google Maps                                     ║
      ║  
@@ -681,7 +622,7 @@
       </div>
     </footer>
 
-    <!-- SECTION 11
+    <!-- SECTION 10
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  LEGAL FOOTER - Юридический подвал (ссылки)                               ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
