@@ -3,7 +3,7 @@
   border-radius: 10px;
   padding: 28px 28px 26px;
   position: relative;
-  min-height: 200px; /* COMMENT: чтобы карточки смотрелись ровнее */
+  min-height: 200px; /*  чтобы карточки смотрелись ровнее */
 }
 
 /* квадрат с номером */
@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
 
-  /* COMMENT: как в макете — в левом верхнем углу */
+  /* в левом верхнем углу */
   position: absolute;
   top: 18px;
   left: 18px;
@@ -28,7 +28,7 @@
 
 /* текст внутри */
 .process-card__text {
-  /* COMMENT: отступ слева/сверху, чтобы текст не налезал на номер */
+  /* отступ слева/сверху, чтобы текст не налезал на номер */
   padding-left: 66px; /* 44 + отступ */
   padding-top: 2px;
 }
@@ -39,7 +39,7 @@
 }
 
 .process-note__accent {
-  color: #992b0a; /* COMMENT: красный "Fertig!" как на макете */
+  color: #992b0a; /* красный "Fertig!" как на макете */
   font-weight: var(--font-weight-bold);
   margin-right: 6px;
 }
@@ -47,7 +47,7 @@
 .process .row > [class*='col-'] {
   align-self: stretch;
 }
-/* ===== адаптив: на мобиле больше воздуха и читаемость ===== */
+/* ===== адаптив: больше воздуха и читаемость ===== */
 @media (max-width: 991.98px) {
   .process-card {
     padding: 24px 22px 22px;
