@@ -16,8 +16,9 @@
   line-height: 1.15;
 }
 
-.quiz-form__headline-accent {
-  text-transform: uppercase;
+/* первая строка заголовка — серым */
+.quiz-form__headline-muted {
+  color: #3d3d3d;
 }
 
 .quiz-form__text {
@@ -72,6 +73,7 @@
   background-position: right 20px center;
   padding-right: 50px;
 }
+
 /* Checkbox */
 .quiz-form__checkbox-wrapper {
   display: flex;
@@ -113,52 +115,38 @@
   max-width: 100%;
 }
 
-/* RIGHT: фото — БЕЗ обрезки и БЕЗ "полос" */
+/* RIGHT: фото */
 .quiz-form__sidebar {
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: flex-end;
 }
 
 .quiz-form__image-wrapper {
   width: 100%;
-  max-width: none; /* было 520px */
+  max-width: none;
 }
 
 .quiz-form__sidebar-text {
   width: 100%;
-  /* max-width: 520px; */
-  max-width: none; /* было 520px */
-  margin-top: 18px; /* воздух между фото и текстом */
+  max-width: none;
+  margin-top: 18px;
 }
 
-/* первая строка под фото */
 .quiz-form__note {
   margin: 0;
 }
 
-/* WICHTIG */
 .quiz-form__important {
   margin: 0;
 }
 
-/* абзацы */
 .quiz-form__important-text {
   margin: 0;
   line-height: 1.55;
 }
 
-/*  фото само задаёт пропорции, ограничиваем высоту */
 .quiz-form__image {
-  /* display: block;
-  max-width: 100%;
-  width: auto; 
-  height: auto;
-
-  max-height: 560px;
-  border-radius: 10px;
-  margin: 0 auto; */
   width: 100%;
   height: auto;
   max-height: 560px;
@@ -178,31 +166,47 @@
   }
 
   .quiz-form__content {
-    max-width: 520px;
+    max-width: 100% !important;
+    width: 100% !important;
     margin-left: 0;
-    margin-right: auto;
+    margin-right: 0;
     text-align: left;
   }
 
-  .quiz-form__submit.btn-primary-custom {
-    align-self: flex-start;
-  }
-  .quiz-form__sidebar {
-    justify-content: flex-start;
-    
+  .quiz-form__form {
+    width: 100%;
   }
 
-  .quiz-form__sidebar{
-    align-items: flex-start
+  .quiz-form__input {
+    max-width: 100% !important;
+    width: 100% !important;
   }
+
+  .quiz-form__headline {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .quiz-form__submit.btn-primary-custom {
+    width: 100%;
+    align-self: auto;
+  }
+
+  .quiz-form__sidebar {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .quiz-form__image-wrapper {
-    max-width: 520px;
+    max-width: none;
     width: 100%;
   }
 
   .quiz-form__image {
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
     max-height: 440px;
   }
 
@@ -220,12 +224,7 @@
     width: 100%;
   }
 
-  .quiz-form__image-wrapper {
-    max-width: 420px;
-  }
-
   .quiz-form__image {
-    max-height: 360px;
+    max-height: 440px;
   }
-  
 }

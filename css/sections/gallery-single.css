@@ -69,11 +69,6 @@
   right: -46px;
 }
 
-/* .gallery--single .swiper-button-prev:hover,
-.gallery--single .swiper-button-next:hover {
-  color: #e2c08d;
-} */
-
 .gallery--single .swiper-button-prev::after,
 .gallery--single .swiper-button-next::after {
   font-family: 'Inter', Arial, sans-serif;
@@ -96,15 +91,7 @@
 
 /* RESPONSIVE */
 
-/* фото ниже, стрелки ближе */
 @media (max-width: 991.98px) {
-  /* на всю ширину экрана */
-  /* .gallery--single > .container {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  } */
-
   .gallery--single .gallery-item img {
     height: 420px;
   }

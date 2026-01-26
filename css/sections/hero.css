@@ -29,7 +29,6 @@
   min-height: 44px;
   padding: 0 26px;
   border-radius: 10px;
-  /* text-decoration: none; */
 }
 
 /* ============================================================================
@@ -39,23 +38,17 @@
 .hero-wedding__media {
   width: 100%;
   overflow: visible;
-
-  /* ИЗМЕНЕНИЕ: вместо absolute-схемы — нормальный поток + прижать вправо */
   display: flex;
   justify-content: flex-end;
-
-  /* как было по смыслу (подложка чуть ниже) */
   padding-top: 20px;
 }
 
-/* Подложка теперь родитель для фото */
+/* Подложка - родитель для фото */
 .hero-wedding__bg {
   position: relative;
   top: -24px;
   width: min(520px, 100%);
-  /* width: min(460px, 100%); */
   aspect-ratio: 1 / 1;
-
   background-color: var(--brand-secondary);
   border-radius: 10px;
 }
@@ -146,17 +139,7 @@ left: -10px;
     flex: none;
   }
 
-  /* .hero-wedding__btn {
-    display: flex;
-    justify-content: center;
-    min-height: 44px;
-    align-items: center;
-  }  */
-
-  /* .hero-wedding__btn {
-    width: 100%;
-    justify-content: center;
-  } */
+ 
 }
 
 /* Доп. мелкий мобайл  */
@@ -177,15 +160,14 @@ left: -10px;
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .hero-wedding .row {
-    --bs-gutter-x: 4rem; /* больше воздуха между колонками ~64px, можно 3.5rem если много */
+    --bs-gutter-x: 4rem; /* между колонками ~64px, можно 3.5rem если много */
   }
 
   .hero-wedding__photos {
     left: -10px; /* чтобы не наезжало на текст*/
   }
 
-  /*если в этом диапазоне подложка кажется слишком большой,
-     можно ограничить её ширину */
+  /*можно ограничить ширину подложки */
   .hero-wedding__bg {
     width: min(480px, 100%);
   }

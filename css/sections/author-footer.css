@@ -3,17 +3,12 @@
    ============================================================================ */
 
 .author-footer {
-  /* padding: 60px 0 80px 0; */
-  padding-bottom: 80px;
-  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-top: 0px;
 }
-.author-footer[class*='pt-'] {
-  padding-top: unset;
-}
-
 .author-footer__content {
-  max-width: 948px;
-  width: 100%; /* добавлено */
+  padding: 0; /* чтобы не было двойных отступов */
+  background: transparent;
 }
 
 /* Name */
@@ -41,10 +36,9 @@
   margin-bottom: 0;
 }
 
-
-.author-footer.bg-brand-secondary .author-footer__social-link {
-  width: 28px;
-  height: 28px;
+/* только для author-footer уменьшаем внутренний padding панели на десктопе */
+.author-footer .section-panel {
+  padding: 40px;
 }
 
 /* Social links */
@@ -58,8 +52,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   color: var(--color-black);
   transition: all 0.3s ease;
 }
@@ -68,8 +62,7 @@
   color: var(--brand-accent);
   transform: translateY(-2px);
 }
-.author-footer__social-link img,
-.author-footer__social-link svg {
+.author-footer__social-link img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -80,23 +73,30 @@
    RESPONSIVE
    ============================================================================ */
 
-@media (min-width: 1200px) {
-  .author-footer__content {
-    max-width: 100%;
+@media (max-width: 1200px) {
+  .author-footer {
+    padding-bottom: 20px;
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 991.98px) {
   .author-footer {
-    padding: 40px 0 60px 0;
+    padding-bottom: 15px;
   }
+  .author-footer .section-panel {
+    padding: 24px;
+  }
+}
 
+@media (max-width: 768px) {
   .author-footer__social-link {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
   }
 
-  .author-footer__social-link svg {
-    width: 40px;
-    height: 40px;
+  @media (max-width: 576px) {
+    .author-footer .section-panel {
+      padding: 18px;
+    }
   }
 }

@@ -101,6 +101,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  text-decoration: none;
   transition:
     transform 0.3s ease,
     background-color 0.3s ease;
@@ -109,6 +110,7 @@
 .btn-outline-custom:hover {
   background-color: rgba(0, 0, 0, 0.05);
   transform: translateY(-2px);
+  text-decoration: none;
 }
 
 /* Image placeholders */

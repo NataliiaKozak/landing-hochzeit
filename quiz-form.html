@@ -1,3 +1,5 @@
+<!-- Стили в quiz-form.css -->
+
 <!doctype html>
 <html lang="de">
   <head>
@@ -70,13 +72,15 @@
                 Klasse, jetzt zum Gutschein
               </p>
 
-              <!-- переносы как на скрине -->
+              <!-- Заголовок: переносы только на десктопе (lg+), первая строка серым -->
               <p class="quiz-form__headline text-bold-big">
-                <span class="d-block" style="color: #3d3d3d"
+                <span class="quiz-form__headline-muted"
                   >Trage dich jetzt ein und sichere dir</span
                 >
-                <span class="d-block">dein Kostenloses Pärchenß</span>
-                <span class="d-block">Fotoshooting 2025</span>
+                <br class="d-none d-lg-block" />
+                dein Kostenloses Pärchen-
+                <br class="d-none d-lg-block" />
+                Fotoshooting 2025
               </p>
 
               <p class="quiz-form__text text-medium-small">
@@ -218,11 +222,9 @@
     </section>
 
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  FOOTER - Подвал с картой Google Maps                                     ║
-     
-     ║                                        ║
+     ║  FOOTER - Подвал с картой Google Maps                                       
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <footer class="footer section-padding bg-brand-primary" id="contact">
+    <footer class="footer bg-brand-primary" id="contact">
       <div class="container">
         <div class="footer__map">
           <iframe

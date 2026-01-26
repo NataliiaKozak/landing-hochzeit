@@ -40,61 +40,26 @@
   display: block;
 }
 
-.thank-you-hero .btn-primary-custom {
-  min-height: 36px; /* было 70 */
-  padding: 0 16px; /* компактно */
-  font-weight: var(--font-weight-medium);
-}
-
-.thank-you-hero .btn-primary-custom:hover {
-  box-shadow: none;
-}
-
-/* убрать подчёркивание у ссылок-кнопок */
-.thank-you-hero .btn-primary-custom,
-.thank-you-hero .btn-outline-custom {
-  text-decoration: none;
-}
-
-.thank-you-hero .btn-primary-custom:hover,
-.thank-you-hero .btn-outline-custom:hover {
-  text-decoration: none;
-}
 .thank-you-hero__secondary-buttons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-/* outline тоже компактнее */
-.thank-you-hero .btn-outline-custom {
-  min-height: 32px;
-  padding: 0 14px;
-}
-
 /* Responsive */
 @media (max-width: 991px) {
   .thank-you-hero__content {
-    margin-inline: auto;
+    max-width: none; /* до правого края */
     text-align: left;
-    margin-left: 0;
-    margin-right: auto; /* НЕ центрируем */
-    text-align: left;
+  }
+
+  .thank-you-hero .btn-primary-custom,
+  .thank-you-hero .btn-outline-custom {
+    width: 100%; /* как в форме */
+    justify-content: center;
   }
 
   .thank-you-hero__secondary-buttons {
-    justify-content: flex-start;
-  }
-
-  .thank-you-hero__image-wrapper {
-    height: 320px;
-    margin-left: 0;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .thank-you-hero {
-    padding: 40px 0 50px;
+    gap: 12px;
   }
 }

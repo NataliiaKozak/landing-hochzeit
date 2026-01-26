@@ -51,14 +51,11 @@
     <link href="css/sections/header.css" rel="stylesheet" />
     <link href="css/sections/hero.css" rel="stylesheet" />
     <link href="css/sections/promotional.css" rel="stylesheet" />
-    <link href="css/sections/features.css" rel="stylesheet" />
     <link href="css/sections/benefits.css" rel="stylesheet" />
     <link href="css/sections/gallery-single.css" rel="stylesheet" />
     <link href="css/sections/gallery-triple.css" rel="stylesheet" />
     <link href="css/sections/expectations.css" rel="stylesheet" />
     <link href="css/sections/process.css" rel="stylesheet" />
-    <link href="css/sections/video.css" rel="stylesheet" />
-    <link href="css/sections/faq.css" rel="stylesheet" />
     <link href="css/sections/about.css" rel="stylesheet" />
     <link href="css/sections/footer.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
@@ -198,13 +195,13 @@
           </p>
         </div>
 
-        <!-- COMMENT: убрали align-items-start, чтобы колонки могли тянуться по высоте -->
+        <!-- без align-items-start, чтобы колонки могли тянуться по высоте -->
         <div class="row g-5">
           <!-- LEFT: cards -->
           <div class="col-lg-7">
             <!-- Card 1 -->
             <div class="benefits__card">
-              <!-- отдельный див под иконку (чтобы под ней не было текста) -->
+              <!-- отдельный див под иконку -->
               <div class="benefits__icon-wrap">
                 <img
                   class="benefits__icon"
@@ -213,7 +210,7 @@
                 />
               </div>
 
-              <!-- COMMENT: отдельный див под заголовок + текст -->
+              <!-- под заголовок + текст -->
               <div class="benefits__content">
                 <h3 class="text-bold-small benefits__title">
                   Spaß und Wohlfühlen - Individuell angepasst
@@ -325,8 +322,9 @@
 
     <!-- SECTION 4 
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений (Swiper.js слайдер)  - 3 фото в слайдере                       ║
-     ║                                 
+     ║  GALLERY - Галерея изображений (gallery-swiper.js)  - 3 фото в слайдере   ║
+     ║  стили - gallery-triple.css  
+              
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
       class="gallery gallery--triple section-padding bg-brand-primary"
@@ -403,7 +401,7 @@
               </div>
             </div>
 
-            <!-- точки можно оставить, но для triple мы их скроем в CSS -->
+            <!-- точки можно оставить, но для triple скроем в CSS -->
             <div class="swiper-pagination"></div>
           </div>
 
@@ -621,8 +619,8 @@
 
     <!-- SECTION 7
      ╔═══════════════════════════════════════════════════════════════════════════╗
-     ║  GALLERY - Галерея изображений. Одно фото на ширину экрана                   
-     ║                                 
+     ║  GALLERY - Галерея изображений (gallery-swiper.js). 
+     ║  Одно фото на ширину экрана       Стили -  gallery-single.css                         
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
     <section
       class="gallery gallery--single section-padding bg-brand-primary"
@@ -773,8 +771,7 @@
         <div class="row g-0">
           <div class="footer__map">
             <!-- ══════════════════════════════════════════════════════════════════════════
-             GOOGLE MAPS - встроенная карта
-             Изменить src="..." на свою ссылку Google Maps Embed
+             GOOGLE MAPS 
              ══════════════════════════════════════════════════════════════════════════ -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77935.54669950697!2d9.679071046090232!3d52.37974254152489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00b514d494f85%3A0x425ac6d94ac4720!2z0JPQsNC90L3QvtCy0LXRgA!5e0!3m2!1sru!2sde!4v1769144411314!5m2!1sru!2sde"

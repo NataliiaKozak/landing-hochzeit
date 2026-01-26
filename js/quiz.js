@@ -298,8 +298,7 @@ function initWeddingDatePicker() {
     disableMobile: true,
     onChange: function (selectedDates, dateStr) {
       // Сохраняем сразу при выборе даты.
-      // ВНИМАНИЕ: если  q1 на другой странице — поменяй на qDate.
-      saveQuizAnswer('qDate', dateStr);
+        saveQuizAnswer('qDate', dateStr);
     },
   });
 }

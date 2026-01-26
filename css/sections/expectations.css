@@ -53,28 +53,10 @@
   gap: 22px;
 }
 
-/* белая панель справа */
-/* .expectations__panel {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 22px;
-  margin-top: var(--panel-offset-top);
-
-  display: flex;
-  flex-direction: column;
-  gap: 22px; */
-
-/* чтобы панель не раздувалась и выглядела как в макете */
-/* max-width: 420px; */
-/* max-width: 560px;
-  margin-left: auto;
-} */
-
 /* фото внутри панели */
 .expectations__photo {
   border-radius: 10px;
   overflow: hidden;
-  /* aspect-ratio: 1 / 1; */
   height: 260px;
 }
 
@@ -86,21 +68,13 @@
 }
 
 @media (min-width: 992px) {
-  /* убираем правый padding у section-panel, чтобы правая колонка “упёрлась” */
-  /* .expectations__panel-wrap.section-panel {
-    padding-right: 0;
-  } */
-  .expectations__white {
+    .expectations__white {
     margin-left: auto;
   }
 }
 
 @media (max-width: 991.98px) {
-  /* .expectations__panel {
-    margin-top: 24px;
-    max-width: none;
-    margin-left: 0;
-  } */
+
   .expectations__photo {
     height: 240px;
   }

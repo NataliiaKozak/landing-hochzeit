@@ -39,9 +39,9 @@
   --line-height-tight: 1.1; /* вместо 100% */
   /* --line-height-tight: 100%; */
   /* --line-height-normal: normal; */
-  --line-height-relaxed: 1.6/* больше воздуха */ 
+  --line-height-relaxed: 1.6; /* больше воздуха */
   --line-height-normal: 1.5;
-  --line-height-compact: 1.4;/* для маленьких абзацев/пояснений */
+  --line-height-compact: 1.4; /* для маленьких абзацев/пояснений */
 
   /* Spacing */
   --spacing-section: 80px;

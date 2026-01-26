@@ -72,11 +72,6 @@
   right: 0;
 }
 
-/* .gallery--triple .swiper-button-prev:hover,
-.gallery--triple .swiper-button-next:hover {
-  color: #e2c08d !important;
-} */
-
 .gallery--triple .swiper-button-prev::after,
 .gallery--triple .swiper-button-next::after {
   font-family: 'Inter', Arial, sans-serif !important;
@@ -114,17 +109,9 @@
 }
 
 /* =========================
-   МОБИЛКА/ПЛАНШЕТ (<992):
    1 фото на всю ширину экрана + свайп
    ========================= */
 @media (max-width: 991.98px) {
-  /* на всю ширину (container не ограничивает) */
-  /* .gallery--triple > .container {
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-  } */
-
   /* убираем боковые поля под стрелки */
   .gallery--triple .gallery-swiper-wrap {
     padding: 0;

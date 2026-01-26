@@ -1,4 +1,4 @@
-# Лендинг "Фотосессии свадеб"
+# Лендинг "Фотосессии свадеб"/ Hochzeitsfotoshootings
 
 ## Структура
 
@@ -6,8 +6,6 @@
   - icons/ # SVG/PNG icons (social, UI)
   - images/ # Photos for the landing + quiz pages
     
-    
-
 - css/
   - quiz-thanks/ # Styles for quiz flow + form + thank-you page
     - quiz-form.css
@@ -18,16 +16,14 @@
     - about.css
     - author-footer.css
     - benefits.css
-    - faq.css
-    - features.css
+    - expectations.css
     - footer.css
-    - fullwidth-image.css
-    - gallery.css
+    - gallery-single.css
+    - gallery-triple.css
     - hero.css
     - legal-footer.css
     - process.css
     - promotional.css
-    - services.css
   - base-styles.css # Design tokens (CSS variables), base settings
   - bootstrap.min.css # Local Bootstrap build
   - common.css # Typography utilities, buttons, shared helpers

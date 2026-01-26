@@ -132,7 +132,7 @@
 }
 
 /* ============================================================================
-   QUIZ QUESTION (DATE PICKER) — только для страницы с календарём
+   QUIZ QUESTION (DATE PICKER) — для страницы с календарём
    включается через .quiz-question--date
    ============================================================================ */
 
@@ -197,7 +197,7 @@
 }
 
 /* ============================================================================
-   QUIZ QUESTION (STACK) — ответы в столбик + текст после вариантов
+   QUIZ QUESTION (STACK) — ответы без фото + текст 
    включается через .quiz-question--stack
    ============================================================================ */
 
@@ -258,6 +258,18 @@
   .quiz-question {
     min-height: auto;
   }
+  .quiz-question--stack .quiz-question__cards {
+    align-items: stretch; /* на всю доступную ширину */
+  }
+
+  .quiz-question--stack .quiz-question__card {
+    width: 100%; /* вместо 420px — на всю ширину */
+    max-width: none; /* не ограничивало */
+  }
+
+  .quiz-question--stack .quiz-question__option {
+    width: 100%; /* кнопка/поле ответа на всю ширину карточки */
+  }
 }
 
 @media (max-width: 768px) {
@@ -292,11 +304,25 @@
 
   .quiz-question__card,
   .quiz-question__cards--2 .quiz-question__card,
-  .quiz-question__cards--3 .quiz-question__card {
-    flex: 0 0 100%;
-    width: 240px;
-    max-width: 240px;
+  .quiz-question__cards--3 .quiz-question__cards--4 .quiz-question__card {
+    flex: none;
+    width: 100%;
+    max-width: none;
     gap: 0;
+  }
+
+  /*  квиз без фото */
+  .quiz-question--stack .quiz-question__cards {
+    align-items: stretch; /*  отменяем center из общего правила */
+  }
+
+  .quiz-question--stack .quiz-question__card {
+    width: 100%; /* вместо 240px */
+    max-width: none; /*  убираем лимит 240px */
+  }
+
+  .quiz-question--stack .quiz-question__option {
+    width: 100%; /* кнопка/поле на всю ширину карточки */
   }
 }
 
@@ -335,9 +361,10 @@
 
   .quiz-question__card,
   .quiz-question__cards--2 .quiz-question__card,
-  .quiz-question__cards--3 .quiz-question__card {
-    width: 200px;
-    max-width: 200px;
+  .quiz-question__cards--3 .quiz-question__cards--4 .quiz-question__card {
+
+    width: 100%;
+    max-width: none;
   }
   /* календарь */
   .quiz-question--date .quiz-date__field {
@@ -352,5 +379,19 @@
   /* в 4-ом квизе - к тексту */
   .quiz-question--stack .quiz-question__card {
     width: 100%;
+  }
+
+  /*  квиз без фото */
+  .quiz-question--stack .quiz-question__cards {
+    align-items: stretch; /*  отменяем center из общего правила */
+  }
+
+  .quiz-question--stack .quiz-question__card {
+    width: 100%; /* вместо 240px */
+    max-width: none; /*  убираем лимит 240px */
+  }
+
+  .quiz-question--stack .quiz-question__option {
+    width: 100%; /* кнопка/поле на всю ширину карточки */
   }
 }
