@@ -1,67 +1,158 @@
-.about-content {
-  max-width: 576px;
+/* Левый блок с медиа */
+.about__media {
+  position: relative;
+  height: 560px; /* высота “сетапа” */
+  overflow: visible;
 }
 
-.about-photo {
-  background-color: var(--color-frame-bg, #f8f8f8);
-  border-radius: 10px;
-  overflow: hidden; /*  не вылазит */
+/* Подложка (видимая) снизу слева */
+.about__bg {
+  position: absolute;
+  left: -60px;
+  bottom: 0;
 
+  width: 580px; /* ширина подложки */
+  height: 260px; /* высота подложки */
+
+  background: var(--brand-secondary);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+/* Две колонки фото (подняты вверх, чтобы подложка была видна) */
+.about__media-grid {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+  height: 100%;
+
+  transform: translateY(-90px); /* фото выше => подложка “вылезает” */
+}
+
+/* Фото общий стиль */
+.about__photo {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.about__photo img {
   width: 100%;
-  max-width: 520px; 
-  margin-left: auto; /* справа */
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Большая левая фото */
+.about__photo--big {
+  flex: 0 0 48%;
+  height: 560px;
+}
+
+/* Правая колонка: заголовок сверху, фото ниже */
+.about__side {
+  flex: 0 0 48%;
+  height: 520px;
 
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  padding: 40px 22px 28px; /* компактнее */
-  gap: 16px; /*  меньше расстояние */
 }
 
-/* фото не фиксируем px и меньше */
-.about-photo img {
-  width: 100%;
-  max-width: 440px; 
-  height: auto;
-  aspect-ratio: 551 / 426; /* пропорции макета */
-
-  display: block;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center; 
+.about__title {
+  margin: 0 0 18px 0; /* заголовок над правым фото */
 }
 
-.about-photo p {
-  margin: 0;
-  text-align: center;
-  color: var(--brand-gold, #e2c08d);
+/* Правая фото занимает оставшуюся высоту */
+.about__photo--small {
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
+/* Правый текстовый блок — ниже, кнопка внизу */
+.about__content {
+  height: 560px;
+  padding-top: 80px; /* опустить блок с текстом */
+  display: flex;
+  flex-direction: column;
+}
 
-@media (max-width: 991px) {
-  .about-content {
-    max-width: none;
+.about__subtitle {
+  margin: 0 0 12px 0;
+}
+
+.about__p {
+  margin: 0 0 12px 0;
+}
+
+/* Кнопка  */
+.about__btn {
+  margin-top: auto;
+  align-self: flex-start;
+
+  min-width: 360px;
+  justify-content: center;
+}
+
+/* =========================
+   < 992
+   ========================= */
+@media (max-width: 991.98px) {
+  .about__media {
+    height: auto;
   }
 
-  .about-photo {
-    max-width: 650px; /* можно больше на планшете */
-    margin-left: 0;
-    margin-right: 0;
-    padding: 24px;
-    gap: 14px;
+  .about__bg {
+    display: none; /*  не усложняем */
   }
 
-  .about-photo img {
-    max-width: none; /*  фото занимает ширину рамки */
+  .about__media-grid {
+    transform: none;
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .about__photo--big,
+  .about__photo--small {
+    flex: none;
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .about__side {
+    height: auto;
+  }
+
+  .about__content {
+    height: auto;
+    padding-top: 18px;
+  }
+
+  .about__btn {
+    width: 100%;
+    min-width: 0;
+    margin-top: 18px;
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* меньше расстояние между двумя фото */
+  .about__media-grid {
+    gap: 16px; /* было 24 */
+    transform: translateY(-60px); /* было -90 -> меньше подъём */
+  }
 
-@media (max-width: 576px) {
-  .about-photo {
-    margin-left: -12px; 
-    margin-right: -12px;
-    max-width: none;
+  /* делаем колонки, чтобы точно помещались */
+  .about__photo--big,
+  .about__side {
+    flex-basis: 46%;
+  }
+
+  /* правая колонка/фото чуть ниже */
+  .about__side {
+    height: 500px; /* было 520/560 */
   }
 }

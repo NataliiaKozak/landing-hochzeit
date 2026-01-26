@@ -681,39 +681,81 @@
      ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  ABOUT - Секция "О нас" / "О фотографе"                                   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="about section-padding bg-brand-primary">
-      <div class="container">
-        <!--  g-4 - между текстом и блоком с фото -->
-        <div class="row align-items-start g-4">
-          <!--  только col-lg-6 (ниже 992 станет в столбик) + порядок (фото первым) -->
-          <div class="col-lg-6 order-2 order-lg-1">
-            <div class="about-content">
-              <h2 class="text-bold-big mb-4">"Triple Vision"</h2>
 
-              <div class="text-medium-small" style="max-width: 576px">
-                Wir sind ein Team aus drei talentierten Fotografen mit
-                individuellen Stilen. <br /><br />
-                Zusammen ergänzen sie sich perfekt und können jede
-                Herausforderung meistern. Mit ihrer Leidenschaft und ihrem
-                Talent haben sie bereits zahlreiche Kunden begeistert und
-                unvergessliche Erinnerungen geschaffen.
-                <br /><br />
-                Ob für Hochzeiten, Familienfotos oder kommerzielle Aufträge –
-                "Triple Vision" ist die perfekte Wahl für außergewöhnliche
-                Fotografie.
+    <section
+      class="about section-padding bg-brand-primary"
+      aria-label="Herzfotografie"
+    >
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <!-- LEFT: media -->
+          <div class="col-lg-7">
+            <div class="about__media">
+              <div class="about__bg" aria-hidden="true"></div>
+
+              <div class="about__media-grid">
+                <!-- big left photo -->
+                <div class="about__photo about__photo--big">
+                  <img
+                    src="assets/images/7.jpg"
+                    alt="Hochzeitsfoto groß"
+                    loading="lazy"
+                  />
+                </div>
+
+                <!-- right column: title + small photo -->
+                <div class="about__side">
+                  <h2 class="text-h2 about__title">Herzfotografie</h2>
+
+                  <div class="about__photo about__photo--small">
+                    <img
+                      src="assets/images/9.jpg"
+                      alt="Hochzeitsfoto klein"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- ИЗМЕНЕНИЕ: фото-колонка первая на моб/планшете -->
-          <div class="col-lg-6 order-1 order-lg-2">
-            <div class="about-photo">
-              <img
-                src="assets/images/foto.jpeg"
-                alt="Triple Vision"
-                loading="lazy"
-              />
-              <p class="text-medium-small mb-0">JS-Photography</p>
+          <!-- RIGHT: text + button -->
+          <div class="col-lg-5">
+            <div class="about__content">
+              <h3 class="text-bold-big about__subtitle">
+                Echte Emotionen, liebevoll festgehalten!
+              </h3>
+
+              <p class="text-small about__p">
+                Wir sind euer Fotografenteam aus Weilheim (Oberbayern) und
+                halten eure Hochzeit in natürlichen, zeitlosen Bildern
+                einfühlsam fest.
+              </p>
+
+              <p class="text-small about__p">
+                Dabei stehen echte Gefühle und eure persönliche Geschichte im
+                Mittelpunkt – keine gestellten Posen, sondern ehrliche
+                Augenblicke.
+              </p>
+
+              <p class="text-small about__p">
+                Mit Erfahrung, Herz und einem Blick fürs Wesentliche begleiten
+                wir euch von der ersten Beratung bis zur finalen Bildbearbeitung
+                – ob draußen in der Natur oder im Studio in Weilheim
+                (Oberbayern).
+              </p>
+
+              <p class="text-small about__p mb-0">
+                Wir freuen uns darauf, euch kennenzulernen und eure besonderen
+                Momente für immer festzuhalten.
+              </p>
+
+              <a
+                href="quiz-1.html"
+                class="btn-primary-custom text-bold-small about__btn"
+              >
+                Zum Kostenlosen Fotoshooting
+              </a>
             </div>
           </div>
         </div>
@@ -735,8 +777,6 @@
              ══════════════════════════════════════════════════════════════════════════ -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d77935.54669950697!2d9.679071046090232!3d52.37974254152489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b00b514d494f85%3A0x425ac6d94ac4720!2z0JPQsNC90L3QvtCy0LXRgA!5e0!3m2!1sru!2sde!4v1769144411314!5m2!1sru!2sde"
-            
-              
               style="border: 0"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
