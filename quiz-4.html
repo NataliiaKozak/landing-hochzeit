@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Hochzeitsfotografen"
-    />
+    <meta name="description" content="Hochzeitsfotografen" />
     <meta name="keywords" content="Fotoshooting, Hochzeit" />
 
-    <title>Wie war deine Erfahrung für die bereitgestellten Informationen? - Quiz</title>
+    <title>
+      Wie war deine Erfahrung für die bereitgestellten Informationen? - Quiz
+    </title>
 
     <!-- Security Headers -->
     <meta
@@ -67,7 +66,10 @@
      ║  QUIZ QUESTION - Секция вопроса с вариантами ответов                       ║
      ║  Под данный макет   ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    <section class="quiz-question bg-brand-primary" data-question-id="q1">
+    <section
+      class="quiz-question quiz-question--stack bg-brand-primary"
+      data-question-id="q4"
+    >
       <div class="container">
         <!-- ════════════════════════════════════════════════════════════════════════
          ЗАГОЛОВОК ВОПРОСА
@@ -79,60 +81,60 @@
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
-         КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
+         ВАРИАНТЫ ВАРИАНТОВ (в столбик)
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__cards quiz-question__cards--3">
           <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <!-- <img
-                src="assets/images/babybauch/foto13.jpg"
-                alt="Hochzeit"
-                class="quiz-question__image"
-              /> -->
-            </div>
+            <div class="quiz-question__image-wrapper"></div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
               data-answer="Informativ"
-              onclick="saveQuizAnswer('q1', 'Informativ')"
+              onclick="saveQuizAnswer('q4', 'Informativ')"
             >
-              <span class="quiz-question__option-text">Informativ und verständlich</span>
+              <span class="quiz-question__option-text"
+                >Informativ und verständlich</span
+              >
             </a>
           </div>
+
           <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <!-- <img
-                src="assets/images/babybauch/foto6.jpg"
-                alt="Hochzeit"
-                class="quiz-question__image"
-              /> -->
-            </div>
+            <div class="quiz-question__image-wrapper"></div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
               data-answer="okay"
-              onclick="saveQuizAnswer('q1', 'okay')"
+              onclick="saveQuizAnswer('q4', 'okay')"
             >
               <span class="quiz-question__option-text">Es war okay</span>
             </a>
           </div>
-           <div class="quiz-question__card">
-            <div class="quiz-question__image-wrapper">
-              <!-- <img
-                src="assets/images/babybauch/foto6.jpg"
-                alt="Hochzeit"
-                class="quiz-question__image"
-              /> -->
-            </div>
+
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper"></div>
             <a
               href="quiz-form.html"
               class="quiz-question__option"
               data-answer="Nicht_informativ"
-              onclick="saveQuizAnswer('q1', 'Nicht_informativ')"
+              onclick="saveQuizAnswer('q4', 'Nicht_informativ')"
             >
-              <span class="quiz-question__option-text">Nicht informativ und kompliziert</span>
+              <span class="quiz-question__option-text"
+                >Nicht informativ und kompliziert</span
+              >
             </a>
           </div>
+        </div>
+
+        <!-- Текст после вариантов  -->
+        <div class="quiz-question__after">
+          <p class="text-bold-big quiz-question__after-title mb-2">
+            Bitte bewerte deine Erfahrung, damit wir uns verbessern können!
+          </p>
+          <p class="text-medium-small quiz-question__after-text mb-0">
+            Wir sind ständig bemüht, neue Wege zu finden, damit du dich wohl
+            fühlst. Wenn das nicht der Fall war, sag uns bitte, was wir besser
+            machen können!
+          </p>
         </div>
       </div>
     </section>

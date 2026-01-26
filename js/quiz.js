@@ -94,9 +94,11 @@ function saveQuizAnswer(questionId, answer) {
     answers: {},
     startTime: new Date().toISOString(),
   };
+
   data.answers[questionId] = answer;
   data.lastUpdated = new Date().toISOString();
   saveQuizDataToStorage(data);
+
   console.log(`Saved answer for ${questionId}: ${answer}`);
 }
 
@@ -187,7 +189,7 @@ async function submitToGoogleSheets(data) {
     return Promise.resolve();
   }
 
-  // Подготовка данных для Google Sheets/ изменено в связи с добавлением квизов
+  // Подготовка данных для Google Sheets
   const payload = {
     timestamp: data.timestamp,
     name: data.name,
@@ -196,12 +198,10 @@ async function submitToGoogleSheets(data) {
     availability: data.availability,
     privacy_accepted: data.privacy ? 'Ja' : 'Nein',
 
-    q1_welches: data.quizAnswers?.q1 || '',
-    q2_termin_baby: data.quizAnswers?.q2 || '',
-    q3_kleider: data.quizAnswers?.q3 || '',
-    q4_wen: data.quizAnswers?.q4 || '',
-
-    q5_kennst: data.quizAnswers?.q5 || '',
+    q1: data.quizAnswers?.q1 || '',
+    q2: data.quizAnswers?.q2 || '',
+    q3r: data.quizAnswers?.q3 || '',
+    q4: data.quizAnswers?.q4 || '',
 
     quiz_start_time: data.quizStartTime || '',
   };
@@ -209,15 +209,13 @@ async function submitToGoogleSheets(data) {
   // Отправка через fetch
   const response = await fetch(QUIZ_CONFIG.googleScriptUrl, {
     method: 'POST',
-    mode: 'no-cors', // Google Apps Script требует no-cors
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(payload),
   });
 
-  // При no-cors мы не можем читать ответ, но если fetch не выбросил ошибку,
-  // считаем что отправка прошла успешно
   return response;
 }
 
@@ -283,12 +281,38 @@ function removeError(field) {
 }
 
 // ============================================================================
+// DATE PICKER (Flatpickr) - safe init
+// ============================================================================
+
+function initWeddingDatePicker() {
+  const dateInput = document.getElementById('wedding-date');
+  if (!dateInput) return;
+
+  // flatpickr будет доступен только на страницах, где ты его подключила
+  if (typeof flatpickr === 'undefined') return;
+
+  flatpickr(dateInput, {
+    locale: 'de',
+    dateFormat: 'd.m.Y',
+    allowInput: false,
+    disableMobile: true,
+    onChange: function (selectedDates, dateStr) {
+      // Сохраняем сразу при выборе даты.
+      // ВНИМАНИЕ: если  q1 на другой странице — поменяй на qDate.
+      saveQuizAnswer('qDate', dateStr);
+    },
+  });
+}
+
+// ============================================================================
 // INITIALIZATION
 // ============================================================================
 
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', function () {
   initQuizData();
+
+  // Date picker (не ломает другие страницы)
+  initWeddingDatePicker();
 
   // Добавить обработчики для снятия ошибок при вводе
   const formInputs = document.querySelectorAll(

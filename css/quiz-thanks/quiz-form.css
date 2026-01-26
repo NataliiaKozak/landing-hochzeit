@@ -116,25 +116,55 @@
 /* RIGHT: фото — БЕЗ обрезки и БЕЗ "полос" */
 .quiz-form__sidebar {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .quiz-form__image-wrapper {
   width: 100%;
-  max-width: 520px;
+  max-width: none; /* было 520px */
+}
+
+.quiz-form__sidebar-text {
+  width: 100%;
+  /* max-width: 520px; */
+  max-width: none; /* было 520px */
+  margin-top: 18px; /* воздух между фото и текстом */
+}
+
+/* первая строка под фото */
+.quiz-form__note {
+  margin: 0;
+}
+
+/* WICHTIG */
+.quiz-form__important {
+  margin: 0;
+}
+
+/* абзацы */
+.quiz-form__important-text {
+  margin: 0;
+  line-height: 1.55;
 }
 
 /*  фото само задаёт пропорции, ограничиваем высоту */
 .quiz-form__image {
-  display: block;
-
+  /* display: block;
   max-width: 100%;
-  width: auto; /* при ограничении высоты не тянулось в ширину */
+  width: auto; 
   height: auto;
 
   max-height: 560px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0 auto; */
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  border-radius: 10px;
+  margin: 0;
+  object-fit: cover;
 }
 
 .quiz-header .container {
@@ -142,7 +172,7 @@
   padding-right: calc(var(--bs-gutter-x) * 0.5);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   .quiz-form {
     padding: 18px 0 36px 0;
   }
@@ -159,8 +189,12 @@
   }
   .quiz-form__sidebar {
     justify-content: flex-start;
+    
   }
 
+  .quiz-form__sidebar{
+    align-items: flex-start
+  }
   .quiz-form__image-wrapper {
     max-width: 520px;
     width: 100%;
@@ -170,6 +204,10 @@
     margin-left: 0;
     margin-right: 0;
     max-height: 440px;
+  }
+
+  .quiz-form__sidebar-text {
+    margin-top: 14px;
   }
 }
 
@@ -189,4 +227,5 @@
   .quiz-form__image {
     max-height: 360px;
   }
+  
 }

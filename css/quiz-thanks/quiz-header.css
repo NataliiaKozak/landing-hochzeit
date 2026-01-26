@@ -10,7 +10,7 @@
 .quiz-header__content {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* было 40/80 */
+  gap: 16px; /* было 10 */
   align-items: flex-start;
 }
 
