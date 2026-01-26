@@ -1,50 +1,64 @@
-.steps-grid__title {
-  margin: 0 0 2.25rem 0;
-  max-width: 600px; /* чтобы переносы были */
+.process-card {
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 28px 28px 26px;
+  position: relative;
+  min-height: 200px; /* COMMENT: чтобы карточки смотрелись ровнее */
 }
 
-/* Карточки */
-.steps-card {
-    height: 100%;/*  карточки одинаковой высоты и “воздушные” */
-  padding: 1.5rem 1.5rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.35);
+/* квадрат с номером */
+.process-card__num {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  background: var(--brand-secondary);
+  color: var(--brand-text);
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* COMMENT: как в макете — в левом верхнем углу */
+  position: absolute;
+  top: 18px;
+  left: 18px;
 }
 
-/* Заголовок внутри карточки */
-.steps-card__title {
-  margin: 0 0 0.75rem 0;
+/* текст внутри */
+.process-card__text {
+  /* COMMENT: отступ слева/сверху, чтобы текст не налезал на номер */
+  padding-left: 66px; /* 44 + отступ */
+  padding-top: 2px;
 }
 
-/* CTA отступ */
-.steps-grid__cta {
-  margin-top: 2.25rem;
+/* нижняя строка */
+.process-note {
+  line-height: var(--line-height-normal);
 }
 
-/* ===== Адаптив ===== */
+.process-note__accent {
+  color: #992b0a; /* COMMENT: красный "Fertig!" как на макете */
+  font-weight: var(--font-weight-bold);
+  margin-right: 6px;
+}
 
-/*  2 колонки (Bootstrap col-md-6 уже делает) */
-@media (max-width: 991px) {
-  .steps-grid__title {
-    max-width: 560px; /* чуть шире, чтобы не было “слишком много” переносов */
+.process .row > [class*='col-'] {
+  align-self: stretch;
+}
+/* ===== адаптив: на мобиле больше воздуха и читаемость ===== */
+@media (max-width: 991.98px) {
+  .process-card {
+    padding: 24px 22px 22px;
   }
-}
 
-/*  1 колонка + заголовок по центру  */
-@media (max-width: 768px) {
-  .steps-grid__title {
-    text-align: center; 
-    max-width: 100%;
-    margin-bottom: 1.75rem;
+  .process-card__num {
+    top: 16px;
+    left: 16px;
   }
 
-  /* текст в карточках остаётся читабельным слева */
-  .steps-card {
-    text-align: left;
-    padding: 1.25rem 1.25rem;
-  }
-
-  .steps-grid__cta {
-    margin-top: 1.75rem;
+  .process-card__text {
+    padding-left: 62px;
   }
 }

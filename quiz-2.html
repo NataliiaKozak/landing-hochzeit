@@ -3,13 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Mit Leidenschaft halten wir deine schönsten Erinnerungen fest"
-    />
-    <meta name="keywords" content="Fotoshooting, Babybauch, kostenlos" />
+    <meta name="description" content="Hochzeitsfotografen" />
+    <meta name="keywords" content="Fotoshooting, Hochzeit" />
 
-    <title>Zum ersten mal schwanger? - Quiz</title>
+    <title>Wie groß plant ihr eure Hochzeit? - Quiz</title>
 
     <!-- Security Headers -->
     <meta
@@ -33,13 +30,12 @@
     <link href="css/quiz-thanks/quiz-header.css" rel="stylesheet" />
     <link href="css/quiz-thanks/quiz-question.css" rel="stylesheet" />
     <link href="css/sections/legal-footer.css" rel="stylesheet" />
-
   </head>
   <body>
     <!-- ╔═══════════════════════════════════════════════════════════════════════════╗
      ║  QUIZ HEADER - Шапка страницы квиза (лого + прогресс)                     ║
      ╚═══════════════════════════════════════════════════════════════════════════╝ -->
-    
+
     <header class="quiz-header bg-brand-primary">
       <div class="container">
         <div class="quiz-header__content">
@@ -47,7 +43,7 @@
           <div class="quiz-header__logo">
             <a
               href="index.html"
-              class="quiz-header__logo-text text-bold-big"
+              class="quiz-header__logo-text text-h2"
               style="color: #3d3d3d"
             >
               Logo
@@ -57,11 +53,9 @@
           <!-- ПРОГРЕСС / ПОДЗАГОЛОВОК-->
           <div class="quiz-header__progress">
             <p class="text-medium-small" style="color: #3d3d3d">
-              3 Fragen bis zum Gutschein 
+              2 Fragen bis zum Gutschein 
             </p>
           </div>
-
-        
         </div>
       </div>
     </header>
@@ -77,46 +71,86 @@
          ════════════════════════════════════════════════════════════════════════ -->
         <div class="quiz-question__title">
           <h1 class="text-h2" style="color: #000000">
-            Zum ersten mal schwanger?
+            Wie groß plant ihr eure Hochzeit?
           </h1>
         </div>
 
         <!-- ════════════════════════════════════════════════════════════════════════
          КАРТОЧКИ ВАРИАНТОВ (картинка + кнопка)
          ════════════════════════════════════════════════════════════════════════ -->
-        <div class="quiz-question__cards quiz-question__cards--2">
+        <div class="quiz-question__cards quiz-question__cards--4">
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto13.jpg"
-                alt="Babybauch"
+                src="assets/images/13.jpg"
+                alt="Hochzeit"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-3.html"
               class="quiz-question__option"
-              data-answer="Ja"
-              onclick="saveQuizAnswer('q1', 'Ja')"
+              data-answer=">50_Gäste"
+              onclick="saveQuizAnswer('q1', '>50_Gäste')"
             >
-              <span class="quiz-question__option-text">Jaa</span>
+              <span class="quiz-question__option-text"
+                >Im engsten Kreis (> 50 Gäste)</span
+              >
             </a>
           </div>
           <div class="quiz-question__card">
             <div class="quiz-question__image-wrapper">
               <img
-                src="assets/images/babybauch/foto6.jpg"
-                alt="Babybauch"
+                src="assets/images/9.jpg"
+                alt="Hochzeit"
                 class="quiz-question__image"
               />
             </div>
             <a
               href="quiz-3.html"
               class="quiz-question__option"
-              data-answer="Nein"
-              onclick="saveQuizAnswer('q1', 'Nein')"
+              data-answer="Mittel"
+              onclick="saveQuizAnswer('q1', 'Mittel')"
             >
-              <span class="quiz-question__option-text">Nein</span>
+              <span class="quiz-question__option-text"
+                >Mittel (50-100 Gäste)</span
+              >
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="assets/images/7.jpg"
+                alt="Hochzeit"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-3.html"
+              class="quiz-question__option"
+              data-answer="Groß"
+              onclick="saveQuizAnswer('q1', 'Groß')"
+            >
+              <span class="quiz-question__option-text">Groß (>100 Gäste)</span>
+            </a>
+          </div>
+          <div class="quiz-question__card">
+            <div class="quiz-question__image-wrapper">
+              <img
+                src="assets/images/12.jpg"
+                alt="Hochzeit"
+                class="quiz-question__image"
+              />
+            </div>
+            <a
+              href="quiz-3.html"
+              class="quiz-question__option"
+              data-answer="nicht_entschieden"
+              onclick="saveQuizAnswer('q1', 'nicht_entschieden')"
+            >
+              <span class="quiz-question__option-text"
+                >Noch nicht entschieden</span
+              >
             </a>
           </div>
         </div>
